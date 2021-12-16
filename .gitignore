@@ -210,3 +210,4 @@ appsettings.json
 !src/**/.editorconfig
 src/.editorconfig
 !**/*.json
+**/DesignTimeBuild/*.*
