@@ -1,1 +1,0 @@
-Umbraco.FeatureManagementDashboard
