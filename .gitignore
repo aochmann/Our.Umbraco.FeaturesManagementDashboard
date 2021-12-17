@@ -211,3 +211,6 @@ appsettings.json
 src/.editorconfig
 !**/*.json
 **/DesignTimeBuild/*.*
+**/*.futdcache*
+**/wwwroot/**/*.*
+**/.vs/**/*.bin
