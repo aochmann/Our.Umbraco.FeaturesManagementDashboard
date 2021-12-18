@@ -1,8 +1,8 @@
 {
   "version": "0.0.0",
-  "name": "umbrac-featuremanagementdashboard",
-  "code": "umbrac-featuremanagementdashboard",
-  "description": "umbrac-featuremanagementdashboard",
+  "name": "umbrac-feature-management-dashboard",
+  "code": "umbrac-feature-management-dashboard",
+  "description": "umbrac-feature-management-dashboard",
   "author": "Adrian Ochmann",
   "license": "MIT",
   "scripts": {
