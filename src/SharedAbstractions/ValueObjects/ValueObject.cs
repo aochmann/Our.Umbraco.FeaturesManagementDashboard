@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
+﻿using System.Reflection;
 
 namespace SharedAbstractions.ValueObjects
 {
@@ -11,7 +8,8 @@ namespace SharedAbstractions.ValueObjects
         protected const int HashCodeMultiplier = 57;
 
         public override bool Equals(object obj)
-            => Equals(obj as ValueObject<T>);
+            => obj is not null
+                && Equals(obj as ValueObject<T>);
 
         public bool Equals(ValueObject<T> other)
             => this == other;

@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.Configuration;
 using Module.FeaturesManagementDashboard.Domain.Entities.Features;
 using Module.FeaturesManagementDashboard.Domain.Repositories;
@@ -43,6 +40,11 @@ namespace Module.FeaturesManagementDashboard.Infrastructure.Repositories
 
             var root = _configuration as IConfigurationRoot;
 
+            if (root is null)
+            {
+                return;
+            }
+
             var providers = root.Providers
                 .Where(provider =>
                     provider.TryGet(featureSection.Path, out var _))
@@ -50,7 +52,6 @@ namespace Module.FeaturesManagementDashboard.Infrastructure.Repositories
 
             foreach (var provider in providers)
             {
-                // for now it updated in memory only
                 provider.Set(featureSection.Path, featureSection.Value);
             }
         }

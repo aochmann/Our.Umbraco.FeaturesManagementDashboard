@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics.CodeAnalysis;
 using Microsoft.FeatureManagement;
 using Module.FeaturesManagementDashboard.Application.DI;
 using Module.FeaturesManagementDashboard.Domain.Entities.Features;
@@ -28,7 +25,7 @@ namespace Module.FeaturesManagementDashboard.Infrastructure.Providers
             }
         }
 
-        public async Task<FeatureDefinition> GetFeatureDefinitionAsync(string featureName)
+        public async Task<FeatureDefinition> GetFeatureDefinitionAsync([DisallowNull] string featureName)
         {
             var feature = await _featureRepository.GetAsync(new FeatureId(featureName));
 

@@ -16,6 +16,8 @@ using Umbraco.Cms.Core.DependencyInjection;
 
 namespace Module.FeaturesManagementDashboard.Infrastructure.Extensions
 {
+#pragma warning disable CS8604 // Possible null reference argument.
+
     public static class InfrastructureExtensions
     {
         public static ServiceRegistry AddInfrastructure([NotNull] this ServiceRegistry registry,
@@ -83,4 +85,6 @@ namespace Module.FeaturesManagementDashboard.Infrastructure.Extensions
             return registry;
         }
     }
+
+#pragma warning restore CS8604 // Possible null reference argument.
 }
