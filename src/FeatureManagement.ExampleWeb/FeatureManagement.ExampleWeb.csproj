@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.FeatureManagement.AspNetCore" Version="2.4.0" />
+    <PackageReference Include="Umbraco.Cms" Version="9.1.2" />
+  </ItemGroup>
+
+  <!-- Force windows to use ICU. Otherwise Windows 10 2019H1+ will do it, but older windows 10 and most if not all winodws servers will run NLS -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ICU.ICU4C.Runtime" Version="68.2.0.9" />
+    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Application\Module.FeaturesManagementDashboard.Application.csproj" />
+    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Domain\Module.FeaturesManagementDashboard.Domain.csproj" />
+    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Infrastructure\Module.FeaturesManagementDashboard.Infrastructure.csproj" />
+    <ProjectReference Include="..\Module.FeaturesManagementDashboard\Module.FeaturesManagementDashboard.csproj" />
+    <ProjectReference Include="..\SharedAbstractions\SharedAbstractions.csproj" />
+    <ProjectReference Include="..\Shared\Shared.csproj" />
+    <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="68.2" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <DefaultItemExcludes>$(DefaultItemExcludes);App_Plugins/**;</DefaultItemExcludes>
+    <DefaultItemExcludes>$(DefaultItemExcludes);umbraco/**;</DefaultItemExcludes>
+    <DefaultItemExcludes>$(DefaultItemExcludes);wwwroot/media/**;</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="App_Plugins/**" CopyToOutputDirectory="Always" />
+    <Content Include="umbraco/**" CopyToOutputDirectory="Always" />
+    <Content Remove="umbraco/Data/**" />
+    <Content Remove="umbraco/Logs/**" />
+    <Content Remove="umbraco/mediacache/**" />
+    <Content Remove="umbraco/models/**" />
+    <Compile Include="umbraco/models/**" Exclude="**/*.flag" />
+  </ItemGroup>
+
+  <Import Project="..\Module.FeaturesManagementDashboard\build\FeaturesManagementDashboard.targets" />
+
+
+  <PropertyGroup>
+    <CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
+  </PropertyGroup>
+
+  <!-- Set this to true if ModelsBuilder mode is not InMemoryAuto-->
+  <PropertyGroup>
+    <RazorCompileOnBuild>false</RazorCompileOnBuild>
+    <RazorCompileOnPublish>false</RazorCompileOnPublish>
+  </PropertyGroup>
+
+</Project>

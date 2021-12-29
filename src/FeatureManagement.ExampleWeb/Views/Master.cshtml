@@ -1,0 +1,15 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    IgnoreBody();
+}
+<html>
+<head>
+    <title>Test Site</title>
+</head>
+<body>
+    <feature name="@(Model.GetTemplateAlias())">
+        @RenderBody()
+    </feature>
+</body>
+</html>
