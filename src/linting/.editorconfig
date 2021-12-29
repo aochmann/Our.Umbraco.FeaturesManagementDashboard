@@ -417,6 +417,18 @@ dotnet_diagnostic.SA1005.severity = suggestion
 
 dotnet_diagnostic.SA1515.severity = suggestion
 
+# CS5001: Program does not contain a static 'Main' method suitable for an entry point
+
+dotnet_diagnostic.CS5001.severity = none
+
+# CS8603: Possible null reference return.
+
+dotnet_diagnostic.CS8603.severity = suggestion
+
+# SA1516:: Adjacent C# elements are not separated by a blank line.
+
+dotnet_diagnostic.SA1516.severity = suggestion
+
 # Treat all cs files in this folder as generated code
 
 [*.generated.cs]

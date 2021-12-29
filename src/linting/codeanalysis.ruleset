@@ -99,6 +99,7 @@
     <Rule Id="CS8019" Action="Info" />
     <Rule Id="CS8020" Action="Warning" />
     <Rule Id="CS8040" Action="Warning" />
+    <Rule Id="CS8603" Action="Info" />
     <Rule Id="CS8714" Action="None" />
   </Rules>
   <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp.EditorFeatures" RuleNamespace="Microsoft.CodeAnalysis.CSharp.EditorFeatures">
@@ -444,7 +445,8 @@
     <Rule Id="SA1508" Action="Error" />
     <Rule Id="SA1512" Action="None" />
     <Rule Id="SA1513" Action="Hidden" />
-    <Rule Id="SA1516" Action="Error" />
+    <Rule Id="SA1515" Action="Hidden" />
+    <Rule Id="SA1516" Action="Info" />
     <Rule Id="SA1518" Action="Error" />
     <Rule Id="SA1519" Action="Info" />
     <Rule Id="SA1600" Action="None" />
@@ -452,7 +454,6 @@
     <Rule Id="SA1629" Action="Info" />
     <Rule Id="SA1633" Action="None" />
     <Rule Id="SA1652" Action="Warning" />
-    <Rule Id="SA1515" Action="Hidden" />
     <Rule Id="SX1101" Action="Error" />
     <Rule Id="SX1309" Action="Error" />
   </Rules>
