@@ -1,5 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ContentTargetFolders>.</ContentTargetFolders>
+    <PackageId>Our.Umbraco.FeaturesManagementDashboard</PackageId>
+    <Title>Our.Umbraco.FeaturesManagementDashboard</Title>
+    <Description>Feature Management dashboard for Umbraco 9</Description>
+    <Product>Feature Management dashboard for Umbraco 9</Product>
+    <PackageTags>umbraco plugin package feature management toggle</PackageTags>
+    <Version>9.0.0</Version>
+    <Authors>Adrian Ochmann, Marcin Zajkowski</Authors>
+    <Copyright>Copyright (c) Adrian Ochmann, Marcin Zajkowski</Copyright>
+    <Company></Company>
+    <PackageProjectUrl>https://github.com/aochmann/Umbraco.FeatureManagementDashboard</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/aochmann/Umbraco.FeatureManagementDashboard</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="App_Plugins\FeatureManagementDashboard\dashboard.controller.js" />
     <None Remove="App_Plugins\FeatureManagementDashboard\dashboard.html" />
@@ -8,18 +26,37 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Lamar" Version="6.0.0" />
+    <PackageReference Include="Lamar.Microsoft.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="MediatR" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+    <PackageReference Include="Scrutor" Version="3.3.0" />
     <PackageReference Include="System.Linq.Async" Version="5.0.0" />
     <PackageReference Include="Umbraco.Cms.Core" Version="9.0.1" />
     <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.0.1" />
+    <PackageReference Include="Umbraco.Cms.Infrastructure" Version="9.0.1" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="DapperExtensions" Version="1.7.0" />
+    <PackageReference Include="Microsoft.FeatureManagement" Version="2.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shared\Shared.csproj" />
-    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Application\Module.FeaturesManagementDashboard.Application.csproj" />
-    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Domain\Module.FeaturesManagementDashboard.Domain.csproj" />
-    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Infrastructure\Module.FeaturesManagementDashboard.Infrastructure.csproj" />
+    <PackageReference Include="Teronis.MSBuild.Packaging.ProjectBuildInPackage" Version="1.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Shared.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\SharedAbstractions\SharedAbstractions.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Application\Module.FeaturesManagementDashboard.Application.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Domain\Module.FeaturesManagementDashboard.Domain.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Infrastructure\Module.FeaturesManagementDashboard.Infrastructure.csproj" PrivateAssets="All" />
+
   </ItemGroup>
 
   <ItemGroup>
@@ -52,5 +89,4 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-
 </Project>

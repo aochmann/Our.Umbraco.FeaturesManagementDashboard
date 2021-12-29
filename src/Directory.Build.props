@@ -35,20 +35,20 @@
     <None Include="$(MSBuildThisFileDirectory).editorconfig" Visible="false" />
   </ItemGroup>
 
-  <PropertyGroup Condition="$(Configuration.StartsWith('Release')) == true">
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <Optimize>true</Optimize>
   </PropertyGroup>
 
-  <PropertyGroup Condition="$(Configuration.StartsWith('Release')) == false">
+  <PropertyGroup Condition="'$(Configuration)' != 'Release'">
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
   </PropertyGroup>
 
-  <PropertyGroup Condition="$(Configuration.StartsWith('Release')) == true">
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <EnableNETAnalyzers>false</EnableNETAnalyzers>
   </PropertyGroup>
 
   <!-- Package versions for package references across all projects -->
-  <ItemGroup Condition="$(Configuration.StartsWith('Release')) == false">
+  <ItemGroup Condition="'$(Configuration)' != 'Release'">
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
     <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="6.0.0" />
     <PackageReference Include="SmartanAlyzers.ExceptionAnalyzer" Version="1.0.10" />
