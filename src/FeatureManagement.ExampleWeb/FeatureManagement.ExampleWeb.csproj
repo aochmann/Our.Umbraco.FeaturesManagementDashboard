@@ -16,7 +16,6 @@
     <PackageReference Include="Umbraco.Cms" Version="9.1.2" />
   </ItemGroup>
 
-  <!-- Force windows to use ICU. Otherwise Windows 10 2019H1+ will do it, but older windows 10 and most if not all winodws servers will run NLS -->
   <ItemGroup>
     <PackageReference Include="Microsoft.ICU.ICU4C.Runtime" Version="68.2.0.9" />
     <ProjectReference Include="..\Module.FeaturesManagementDashboard.Application\Module.FeaturesManagementDashboard.Application.csproj" />
@@ -44,7 +43,7 @@
     <Compile Include="umbraco/models/**" Exclude="**/*.flag" />
   </ItemGroup>
 
-  <Import Project="..\Module.FeaturesManagementDashboard\build\FeaturesManagementDashboard.targets" />
+  <Import Project="..\Module.FeaturesManagementDashboard\build\Our.Umbraco.FeaturesManagementDashboard.targets" />
 
 
   <PropertyGroup>
