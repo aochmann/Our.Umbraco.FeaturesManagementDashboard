@@ -216,3 +216,9 @@ src/.editorconfig
 **/.vs/**/*.bin
 **/.vs/**/config/applicationhost.config
 **/.vs/**/v17/HierarchyCache.*.txt
+
+.vs/VSWorkspaceState.json
+
+.vs/ProjectSettings.json
+
+.vs/slnx.sqlite
