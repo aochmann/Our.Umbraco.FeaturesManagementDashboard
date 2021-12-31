@@ -92,7 +92,7 @@ jobs:
             --no-restore \
             -o ${{ env.NUGET_OUTPUT }} \
             /p:Version=${{ env.VERSION }} \
-            /p:AssemblyVersion=${{ env.VERSION }} \
+            /p:AssemblyVersion=${{ env.VERSION }}
 
       - name: Upload NuGet artifact
         if: ${{ github.event_name != 'pull_request' }}
