@@ -8,9 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFrameworks>net6.0;net5.0</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <NoWarn>1591;1701;1702;8032;NU1701;AD0001;CA1041;CS0311;CS5001</NoWarn>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
@@ -26,6 +24,11 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <EnablePackageValidation>true</EnablePackageValidation>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net6.0'">
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
