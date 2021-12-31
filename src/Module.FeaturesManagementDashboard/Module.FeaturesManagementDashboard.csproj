@@ -54,37 +54,18 @@
     <ProjectReference Include="..\Module.FeaturesManagementDashboard.Application\Module.FeaturesManagementDashboard.Application.csproj" PrivateAssets="All" />
     <ProjectReference Include="..\Module.FeaturesManagementDashboard.Domain\Module.FeaturesManagementDashboard.Domain.csproj" PrivateAssets="All" />
     <ProjectReference Include="..\Module.FeaturesManagementDashboard.Infrastructure\Module.FeaturesManagementDashboard.Infrastructure.csproj" PrivateAssets="All" />
-
   </ItemGroup>
 
   <ItemGroup>
-
     <Content Include="App_Plugins\FeatureManagementDashboard\**\*.*">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
 
     <None Include="build\**\*.*">
-      <Pack>False</Pack>
+      <Pack>True</Pack>
       <PackagePath>buildTransitive</PackagePath>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Update="App_Plugins\FeatureManagementDashboard\dashboard.controller.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="App_Plugins\FeatureManagementDashboard\dashboard.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="App_Plugins\FeatureManagementDashboard\dashboard.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="App_Plugins\FeatureManagementDashboard\package.manifest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="App_Plugins\FeatureManagementDashboard\package.manifest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 </Project>
