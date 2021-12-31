@@ -2,7 +2,7 @@
 <Project>
 
   <PropertyGroup>
-    <Company>Adrian Ochmann</Company>
+    <Company>Adrian Ochmann and Marcin Zajkowski</Company>
     <Authors>$(Company)</Authors>
     <Copyright>Copyright (c) $(Company) $([System.DateTime]::Now.Year)</Copyright>
   </PropertyGroup>

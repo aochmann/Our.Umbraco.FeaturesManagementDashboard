@@ -10,8 +10,6 @@
     <Version></Version>
     <Authors>Adrian Ochmann, Marcin Zajkowski</Authors>
     <Owners>Adrian Ochmann, Marcin Zajkowski</Owners>
-    <Copyright>Copyright (c) Adrian Ochmann, Marcin Zajkowski</Copyright>
-    <Company></Company>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
