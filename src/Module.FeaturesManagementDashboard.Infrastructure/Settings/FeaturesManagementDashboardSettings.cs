@@ -1,4 +1,4 @@
-﻿namespace Module.FeaturesManagementDashboard.Infrastructure.Settings
+﻿namespace FeaturesManagementDashboard.Infrastructure.Settings
 {
     public record FeaturesManagementDashboardSettings
     {

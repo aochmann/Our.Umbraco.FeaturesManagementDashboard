@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Umbraco.Cms.Core.DependencyInjection;
 
-namespace Module.FeaturesManagementDashboard.Extensions
+namespace FeaturesManagementDashboard.Extensions
 {
     public static class FeaturesManagementDashboardExtensions
     {

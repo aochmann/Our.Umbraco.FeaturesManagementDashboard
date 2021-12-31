@@ -32,13 +32,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{3AA3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FeaturesManagementDashboard", "FeaturesManagementDashboard", "{81A6F767-2E5B-4137-AA7D-E04525C59151}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module.FeaturesManagementDashboard.Application", "src\Module.FeaturesManagementDashboard.Application\Module.FeaturesManagementDashboard.Application.csproj", "{CDCF621C-1B5B-4FE7-84BC-2E9193AA69F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeaturesManagementDashboard.Application", "src\Module.FeaturesManagementDashboard.Application\FeaturesManagementDashboard.Application.csproj", "{CDCF621C-1B5B-4FE7-84BC-2E9193AA69F4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module.FeaturesManagementDashboard", "src\Module.FeaturesManagementDashboard\Module.FeaturesManagementDashboard.csproj", "{AC308BCF-19F3-42E0-B0CD-AD4660A1A6A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeaturesManagementDashboard", "src\Module.FeaturesManagementDashboard\FeaturesManagementDashboard.csproj", "{AC308BCF-19F3-42E0-B0CD-AD4660A1A6A5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module.FeaturesManagementDashboard.Infrastructure", "src\Module.FeaturesManagementDashboard.Infrastructure\Module.FeaturesManagementDashboard.Infrastructure.csproj", "{62A724AC-9202-493A-8234-1FF32121E9CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeaturesManagementDashboard.Infrastructure", "src\Module.FeaturesManagementDashboard.Infrastructure\FeaturesManagementDashboard.Infrastructure.csproj", "{62A724AC-9202-493A-8234-1FF32121E9CA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module.FeaturesManagementDashboard.Domain", "src\Module.FeaturesManagementDashboard.Domain\Module.FeaturesManagementDashboard.Domain.csproj", "{3D0323E0-F6B6-44D5-93C7-28F7C003FC52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeaturesManagementDashboard.Domain", "src\Module.FeaturesManagementDashboard.Domain\FeaturesManagementDashboard.Domain.csproj", "{3D0323E0-F6B6-44D5-93C7-28F7C003FC52}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeatureManagement.ExampleWeb", "src\FeatureManagement.ExampleWeb\FeatureManagement.ExampleWeb.csproj", "{074FF0D5-AC9D-4459-8BD1-6231C45C6850}"
 EndProject

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Module.FeaturesManagementDashboard.Application.DTO.Features;
-using Module.FeaturesManagementDashboard.Domain.Entities.Features;
+using FeaturesManagementDashboard.Application.DTO.Features;
+using FeaturesManagementDashboard.Domain.Entities.Features;
 using SharedAbstractions.Mappers;
 
-namespace Module.FeaturesManagementDashboard.Infrastructure.Mappers
+namespace FeaturesManagementDashboard.Infrastructure.Mappers
 {
 #pragma warning disable SA1649 // File name should match first type name
 

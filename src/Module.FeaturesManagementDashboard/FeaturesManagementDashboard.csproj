@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
     <ContentTargetFolders>.</ContentTargetFolders>
     <PackageId>Our.Umbraco.FeaturesManagementDashboard</PackageId>
     <Title>Our.Umbraco.FeaturesManagementDashboard</Title>
@@ -51,9 +50,9 @@
   <ItemGroup>
     <ProjectReference Include="..\Shared\Shared.csproj" PrivateAssets="All" />
     <ProjectReference Include="..\SharedAbstractions\SharedAbstractions.csproj" PrivateAssets="All" />
-    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Application\Module.FeaturesManagementDashboard.Application.csproj" PrivateAssets="All" />
-    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Domain\Module.FeaturesManagementDashboard.Domain.csproj" PrivateAssets="All" />
-    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Infrastructure\Module.FeaturesManagementDashboard.Infrastructure.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Application\FeaturesManagementDashboard.Application.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Domain\FeaturesManagementDashboard.Domain.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Infrastructure\FeaturesManagementDashboard.Infrastructure.csproj" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>

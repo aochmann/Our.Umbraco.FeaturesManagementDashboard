@@ -1,10 +1,10 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using FeaturesManagementDashboard.Application.DI;
+using FeaturesManagementDashboard.Domain.Entities.Features;
+using FeaturesManagementDashboard.Domain.Repositories;
 using Microsoft.FeatureManagement;
-using Module.FeaturesManagementDashboard.Application.DI;
-using Module.FeaturesManagementDashboard.Domain.Entities.Features;
-using Module.FeaturesManagementDashboard.Domain.Repositories;
 
-namespace Module.FeaturesManagementDashboard.Infrastructure.Providers
+namespace FeaturesManagementDashboard.Infrastructure.Providers
 {
     internal class UmbracoFeatureDefinitionProvider : IFeatureDefinitionProvider
     {

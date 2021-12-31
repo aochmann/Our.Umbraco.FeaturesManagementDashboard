@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Module.FeaturesManagementDashboard.Application.DTO.Features;
+using FeaturesManagementDashboard.Application.DTO.Features;
 
-namespace Module.FeaturesManagementDashboard.Application.Queries
+namespace FeaturesManagementDashboard.Application.Queries
 {
     public record GetFeatures : IQuery<GetFeatures, IEnumerable<FeatureDto>>;
 }

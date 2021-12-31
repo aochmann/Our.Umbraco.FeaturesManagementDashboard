@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace Module.FeaturesManagementDashboard.Infrastructure.Exceptions
+namespace FeaturesManagementDashboard.Infrastructure.Exceptions
 {
     public abstract class InfrastructureException : Exception
     {

@@ -1,10 +1,10 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using Module.FeaturesManagementDashboard.Domain.Entities.Features;
-using Module.FeaturesManagementDashboard.Domain.Exceptions;
-using Module.FeaturesManagementDashboard.Domain.Repositories;
+using FeaturesManagementDashboard.Domain.Entities.Features;
+using FeaturesManagementDashboard.Domain.Exceptions;
+using FeaturesManagementDashboard.Domain.Repositories;
 
-namespace Module.FeaturesManagementDashboard.Application.Commands.Handlers
+namespace FeaturesManagementDashboard.Application.Commands.Handlers
 {
     internal class UpdateFeatureHandler : ICommandHandler<UpdateFeature>
     {

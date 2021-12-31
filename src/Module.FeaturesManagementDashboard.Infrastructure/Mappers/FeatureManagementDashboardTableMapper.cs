@@ -1,8 +1,8 @@
 ﻿using DapperExtensions.Mapper;
-using Module.FeaturesManagementDashboard.Application.DTO.Features;
-using Module.FeaturesManagementDashboard.Infrastructure.Constants;
+using FeaturesManagementDashboard.Application.DTO.Features;
+using FeaturesManagementDashboard.Infrastructure.Constants;
 
-namespace Module.FeaturesManagementDashboard.Infrastructure.Mappers
+namespace FeaturesManagementDashboard.Infrastructure.Mappers
 {
     internal class FeatureManagementDashboardTableMapper : ClassMapper<FeatureDto>
     {

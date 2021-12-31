@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using FeaturesManagementDashboard.Application.Commands;
+using FeaturesManagementDashboard.Application.DI;
+using FeaturesManagementDashboard.Application.DTO.Features;
+using FeaturesManagementDashboard.Application.Queries;
 using Microsoft.AspNetCore.Mvc;
-using Module.FeaturesManagementDashboard.Application.Commands;
-using Module.FeaturesManagementDashboard.Application.DI;
-using Module.FeaturesManagementDashboard.Application.DTO.Features;
-using Module.FeaturesManagementDashboard.Application.Queries;
 using Umbraco.Cms.Web.BackOffice.Controllers;
 
-namespace Module.FeaturesManagementDashboard.Controllers
+namespace FeaturesManagementDashboard.Controllers
 {
     [Route("umbraco/backoffice/api/[controller]")]
     public class FeaturesManagementDashboardController : UmbracoAuthorizedApiController

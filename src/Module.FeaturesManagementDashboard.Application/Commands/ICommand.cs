@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Module.FeaturesManagementDashboard.Application.Commands
+namespace FeaturesManagementDashboard.Application.Commands
 {
     public interface ICommand : INotification
     {

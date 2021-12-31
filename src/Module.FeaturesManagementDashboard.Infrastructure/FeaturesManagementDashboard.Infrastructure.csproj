@@ -4,7 +4,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Application\Module.FeaturesManagementDashboard.Application.csproj" />
+    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Application\FeaturesManagementDashboard.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
-      <_Parameter1>Module.FeaturesManagementDashboard</_Parameter1>
+      <_Parameter1>FeaturesManagementDashboard</_Parameter1>
     </AssemblyAttribute>
   </ItemGroup>
 

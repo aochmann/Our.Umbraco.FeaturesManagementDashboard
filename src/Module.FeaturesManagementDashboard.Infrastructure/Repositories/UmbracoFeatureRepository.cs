@@ -4,14 +4,14 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using DapperExtensions;
-using Module.FeaturesManagementDashboard.Application.DTO.Features;
-using Module.FeaturesManagementDashboard.Domain.Entities.Features;
-using Module.FeaturesManagementDashboard.Domain.Repositories;
-using Module.FeaturesManagementDashboard.Infrastructure.Mappers;
+using FeaturesManagementDashboard.Application.DTO.Features;
+using FeaturesManagementDashboard.Domain.Entities.Features;
+using FeaturesManagementDashboard.Domain.Repositories;
+using FeaturesManagementDashboard.Infrastructure.Mappers;
 using Umbraco.Cms.Core.Configuration;
 using Umbraco.Cms.Core.Configuration.Models;
 
-namespace Module.FeaturesManagementDashboard.Infrastructure.Repositories
+namespace FeaturesManagementDashboard.Infrastructure.Repositories
 {
     internal class UmbracoFeatureRepository : IUmbracoFeatureRepository
     {
@@ -96,12 +96,12 @@ namespace Module.FeaturesManagementDashboard.Infrastructure.Repositories
 
                 if (featureExists)
                 {
-                    await connection.UpdateAsync<FeatureDto>(featureDto);
+                    await connection.UpdateAsync(featureDto);
 
                     return;
                 }
 
-                await connection.InsertAsync<FeatureDto>(featureDto);
+                await connection.InsertAsync(featureDto);
             }
             catch (Exception)
             {

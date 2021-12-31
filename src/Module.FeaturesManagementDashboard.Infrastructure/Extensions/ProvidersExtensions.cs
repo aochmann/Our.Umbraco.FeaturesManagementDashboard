@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using FeaturesManagementDashboard.Infrastructure.Providers;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.FeatureManagement;
-using Module.FeaturesManagementDashboard.Infrastructure.Providers;
 
-namespace Module.FeaturesManagementDashboard.Infrastructure.Extensions
+namespace FeaturesManagementDashboard.Infrastructure.Extensions
 {
     internal static class ProvidersExtensions
     {

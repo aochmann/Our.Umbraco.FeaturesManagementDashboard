@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Module.FeaturesManagementDashboard.Application.Queries
+namespace FeaturesManagementDashboard.Application.Queries
 {
     public interface IQueryDispatcher
     {

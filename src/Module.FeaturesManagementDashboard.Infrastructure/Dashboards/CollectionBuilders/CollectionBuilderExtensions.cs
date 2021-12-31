@@ -2,7 +2,7 @@
 using Umbraco.Cms.Core.Dashboards;
 using Umbraco.Cms.Core.DependencyInjection;
 
-namespace Module.FeaturesManagementDashboard.Infrastructure.Dashboards.CollectionBuilders
+namespace FeaturesManagementDashboard.Infrastructure.Dashboards.CollectionBuilders
 {
     internal static class CollectionBuilderExtensions
     {
@@ -12,7 +12,7 @@ namespace Module.FeaturesManagementDashboard.Infrastructure.Dashboards.Collectio
 
             var dashboardCollectionBuilder = builder.Dashboards();
 
-            builder.Services.AddSingleton<DashboardCollectionBuilder>(dashboardCollectionBuilder);
+            builder.Services.AddSingleton(dashboardCollectionBuilder);
 
             dashboardCollectionBuilder.Remove<FeatureManagementDashboard>();
 

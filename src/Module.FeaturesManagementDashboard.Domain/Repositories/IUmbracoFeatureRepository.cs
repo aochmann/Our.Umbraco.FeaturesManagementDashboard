@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Module.FeaturesManagementDashboard.Domain.Entities.Features;
+using FeaturesManagementDashboard.Domain.Entities.Features;
 using SharedAbstractions.Domain;
 
-namespace Module.FeaturesManagementDashboard.Domain.Repositories
+namespace FeaturesManagementDashboard.Domain.Repositories
 {
     public interface IUmbracoFeatureRepository : IRepository<Feature, FeatureId>
     {

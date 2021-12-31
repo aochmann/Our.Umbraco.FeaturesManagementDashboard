@@ -1,4 +1,4 @@
-﻿namespace Module.FeaturesManagementDashboard.Domain.Entities.Features
+﻿namespace FeaturesManagementDashboard.Domain.Entities.Features
 {
     public static class FeatureIdExtensions
     {

@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Module.FeaturesManagementDashboard.Domain.Entities.Features;
+using FeaturesManagementDashboard.Domain.Entities.Features;
 
-namespace Module.FeaturesManagementDashboard.Infrastructure.Comparers
+namespace FeaturesManagementDashboard.Infrastructure.Comparers
 {
 #pragma warning disable CS8767 // Nullability of reference types in type of parameter doesn't match implicitly implemented member (possibly because of nullability attributes).
 

@@ -2,12 +2,12 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Module.FeaturesManagementDashboard.Application.DTO.Features;
-using Module.FeaturesManagementDashboard.Application.Queries;
-using Module.FeaturesManagementDashboard.Domain.Repositories;
-using Module.FeaturesManagementDashboard.Infrastructure.Mappers;
+using FeaturesManagementDashboard.Application.DTO.Features;
+using FeaturesManagementDashboard.Application.Queries;
+using FeaturesManagementDashboard.Domain.Repositories;
+using FeaturesManagementDashboard.Infrastructure.Mappers;
 
-namespace Module.FeaturesManagementDashboard.Infrastructure.Queries.Handlers
+namespace FeaturesManagementDashboard.Infrastructure.Queries.Handlers
 {
     internal class GetFeaturesHandler : IQueryHandler<GetFeatures, IEnumerable<FeatureDto>>
     {

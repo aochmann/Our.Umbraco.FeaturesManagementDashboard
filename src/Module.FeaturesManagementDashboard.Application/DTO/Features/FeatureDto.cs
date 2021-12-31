@@ -1,4 +1,4 @@
-﻿namespace Module.FeaturesManagementDashboard.Application.DTO.Features
+﻿namespace FeaturesManagementDashboard.Application.DTO.Features
 {
     public record FeatureDto
     {

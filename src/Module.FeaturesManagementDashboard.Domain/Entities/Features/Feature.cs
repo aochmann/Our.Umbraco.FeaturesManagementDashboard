@@ -1,6 +1,6 @@
 ﻿using SharedAbstractions.Domain;
 
-namespace Module.FeaturesManagementDashboard.Domain.Entities.Features
+namespace FeaturesManagementDashboard.Domain.Entities.Features
 {
     public class Feature : AggregateRoot<FeatureId>
     {

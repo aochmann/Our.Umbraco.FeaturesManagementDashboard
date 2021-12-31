@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Module.FeaturesManagementDashboard.Infrastructure.Dashboards;
-using Module.FeaturesManagementDashboard.Infrastructure.Dashboards.CollectionBuilders;
+using FeaturesManagementDashboard.Infrastructure.Dashboards;
+using FeaturesManagementDashboard.Infrastructure.Dashboards.CollectionBuilders;
 using Umbraco.Cms.Core.DependencyInjection;
 
-namespace Module.FeaturesManagementDashboard.Infrastructure.Extensions
+namespace FeaturesManagementDashboard.Infrastructure.Extensions
 {
     internal static class DashboardExtensions
     {

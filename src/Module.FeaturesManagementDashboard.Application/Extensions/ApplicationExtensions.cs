@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using FeaturesManagementDashboard.Application.Commands;
 using Lamar;
-using Module.FeaturesManagementDashboard.Application.Commands;
 using Shared.Commands;
 
-namespace Module.FeaturesManagementDashboard.Application.Extensions
+namespace FeaturesManagementDashboard.Application.Extensions
 {
     public static class ApplicationExtensions
     {

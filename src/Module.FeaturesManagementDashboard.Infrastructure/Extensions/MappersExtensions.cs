@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using MappersMap = Shared.Mappers;
 
-namespace Module.FeaturesManagementDashboard.Infrastructure.Extensions
+namespace FeaturesManagementDashboard.Infrastructure.Extensions
 {
     internal static class MappersExtensions
     {

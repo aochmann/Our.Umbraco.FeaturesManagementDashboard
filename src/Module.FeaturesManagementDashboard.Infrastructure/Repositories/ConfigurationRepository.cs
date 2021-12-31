@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using FeaturesManagementDashboard.Domain.Entities.Features;
+using FeaturesManagementDashboard.Domain.Repositories;
 using Microsoft.Extensions.Configuration;
-using Module.FeaturesManagementDashboard.Domain.Entities.Features;
-using Module.FeaturesManagementDashboard.Domain.Repositories;
 
-namespace Module.FeaturesManagementDashboard.Infrastructure.Repositories
+namespace FeaturesManagementDashboard.Infrastructure.Repositories
 {
     internal class ConfigurationRepository : IConfigurationFeatureRepository
     {

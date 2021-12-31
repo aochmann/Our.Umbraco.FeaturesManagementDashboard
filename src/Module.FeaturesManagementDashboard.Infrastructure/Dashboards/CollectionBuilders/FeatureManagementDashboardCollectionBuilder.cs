@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using FeaturesManagementDashboard.Infrastructure.Exceptions;
+using FeaturesManagementDashboard.Infrastructure.Settings;
 using Microsoft.Extensions.DependencyInjection;
-using Module.FeaturesManagementDashboard.Infrastructure.Exceptions;
-using Module.FeaturesManagementDashboard.Infrastructure.Settings;
 using Umbraco.Cms.Core.Dashboards;
 using Umbraco.Cms.Core.Manifest;
 
-namespace Module.FeaturesManagementDashboard.Infrastructure.Dashboards.CollectionBuilders
+namespace FeaturesManagementDashboard.Infrastructure.Dashboards.CollectionBuilders
 {
     public class FeatureManagementDashboardCollectionBuilder : DashboardCollectionBuilder
     {

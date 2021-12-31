@@ -1,4 +1,4 @@
-﻿namespace Module.FeaturesManagementDashboard.Domain.Exceptions
+﻿namespace FeaturesManagementDashboard.Domain.Exceptions
 {
     public class FeatureNotFoundException : DomainException
     {

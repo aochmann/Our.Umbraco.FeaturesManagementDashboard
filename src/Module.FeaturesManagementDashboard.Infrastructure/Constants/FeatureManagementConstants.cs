@@ -1,4 +1,4 @@
-﻿namespace Module.FeaturesManagementDashboard.Infrastructure.Constants
+﻿namespace FeaturesManagementDashboard.Infrastructure.Constants
 {
     internal static class FeatureManagementConstants
     {

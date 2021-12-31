@@ -1,20 +1,21 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using FeaturesManagementDashboard.Application.Commands;
+using FeaturesManagementDashboard.Application.Queries;
+using FeaturesManagementDashboard.Infrastructure;
+using FeaturesManagementDashboard.Infrastructure.HandlerDispatchers;
 using Lamar;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.FeatureManagement;
 using Microsoft.FeatureManagement.FeatureFilters;
-using Module.FeaturesManagementDashboard.Application.Commands;
-using Module.FeaturesManagementDashboard.Application.Queries;
-using Module.FeaturesManagementDashboard.Infrastructure.HandlerDispatchers;
 using Shared.Domain;
 using Shared.Queries;
 using SharedAbstractions.DI;
 using Umbraco.Cms.Core.Configuration.Models;
 using Umbraco.Cms.Core.DependencyInjection;
 
-namespace Module.FeaturesManagementDashboard.Infrastructure.Extensions
+namespace FeaturesManagementDashboard.Infrastructure.Extensions
 {
 #pragma warning disable CS8604 // Possible null reference argument.
 

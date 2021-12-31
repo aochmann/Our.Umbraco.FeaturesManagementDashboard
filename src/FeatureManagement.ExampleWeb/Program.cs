@@ -1,5 +1,5 @@
 ﻿using FeatureManagement.ExampleWeb;
-using Module.FeaturesManagementDashboard.Extensions;
+using FeaturesManagementDashboard.Extensions;
 using Umbraco.Cms.Core.DependencyInjection;
 using Umbraco.Extensions;
 

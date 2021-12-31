@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
+using FeaturesManagementDashboard.Application.Queries;
 using MediatR;
-using Module.FeaturesManagementDashboard.Application.Queries;
 
-namespace Module.FeaturesManagementDashboard.Infrastructure.HandlerDispatchers
+namespace FeaturesManagementDashboard.Infrastructure.HandlerDispatchers
 {
     internal class QueryDispatcher : IQueryDispatcher
     {
@@ -17,7 +17,7 @@ namespace Module.FeaturesManagementDashboard.Infrastructure.HandlerDispatchers
         {
             try
             {
-                return await _querySender.Send<TResult>(query);
+                return await _querySender.Send(query);
             }
             catch (Exception)
             {

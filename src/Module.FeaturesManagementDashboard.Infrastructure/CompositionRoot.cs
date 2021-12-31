@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using FeaturesManagementDashboard.Application.DI;
 using Lamar;
-using Module.FeaturesManagementDashboard.Application.DI;
 using Shared.Exceptions;
 
-namespace Module.FeaturesManagementDashboard.Infrastructure
+namespace FeaturesManagementDashboard.Infrastructure
 {
     internal class CompositionRoot : ICompositionRoot
     {

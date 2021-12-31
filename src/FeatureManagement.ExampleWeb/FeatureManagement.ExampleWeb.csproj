@@ -18,10 +18,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.ICU.ICU4C.Runtime" Version="68.2.0.9" />
-    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Application\Module.FeaturesManagementDashboard.Application.csproj" />
-    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Domain\Module.FeaturesManagementDashboard.Domain.csproj" />
-    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Infrastructure\Module.FeaturesManagementDashboard.Infrastructure.csproj" />
-    <ProjectReference Include="..\Module.FeaturesManagementDashboard\Module.FeaturesManagementDashboard.csproj" />
+    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Application\FeaturesManagementDashboard.Application.csproj" />
+    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Domain\FeaturesManagementDashboard.Domain.csproj" />
+    <ProjectReference Include="..\Module.FeaturesManagementDashboard.Infrastructure\FeaturesManagementDashboard.Infrastructure.csproj" />
+    <ProjectReference Include="..\Module.FeaturesManagementDashboard\FeaturesManagementDashboard.csproj" />
     <ProjectReference Include="..\SharedAbstractions\SharedAbstractions.csproj" />
     <ProjectReference Include="..\Shared\Shared.csproj" />
     <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="68.2" />

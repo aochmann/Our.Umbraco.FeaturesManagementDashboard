@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Module.FeaturesManagementDashboard.Application.Commands
+namespace FeaturesManagementDashboard.Application.Commands
 {
     public interface ICommandDispatcher
     {

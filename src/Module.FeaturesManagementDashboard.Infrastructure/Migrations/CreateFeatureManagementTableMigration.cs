@@ -1,8 +1,8 @@
-﻿using Module.FeaturesManagementDashboard.Application.DTO.Features;
-using Module.FeaturesManagementDashboard.Infrastructure.Constants;
+﻿using FeaturesManagementDashboard.Application.DTO.Features;
+using FeaturesManagementDashboard.Infrastructure.Constants;
 using Umbraco.Cms.Infrastructure.Migrations;
 
-namespace Module.FeaturesManagementDashboard.Infrastructure.Migrations
+namespace FeaturesManagementDashboard.Infrastructure.Migrations
 {
     internal class CreateFeatureManagementTableMigration : MigrationBase
     {

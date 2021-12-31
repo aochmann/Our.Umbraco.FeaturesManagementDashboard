@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
+using FeaturesManagementDashboard.Application.Commands;
 using MediatR;
 
-namespace Module.FeaturesManagementDashboard.Application.Commands
+namespace FeaturesManagementDashboard.Infrastructure.HandlerDispatchers
 {
     internal class CommandDispatcher : ICommandDispatcher
     {

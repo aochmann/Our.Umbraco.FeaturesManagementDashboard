@@ -1,12 +1,12 @@
-﻿using Lamar;
+﻿using FeaturesManagementDashboard.Application.DI;
+using FeaturesManagementDashboard.Application.Extensions;
+using FeaturesManagementDashboard.Infrastructure;
+using FeaturesManagementDashboard.Infrastructure.Extensions;
+using Lamar;
 using Microsoft.Extensions.DependencyInjection;
-using Module.FeaturesManagementDashboard.Application.DI;
-using Module.FeaturesManagementDashboard.Application.Extensions;
-using Module.FeaturesManagementDashboard.Infrastructure;
-using Module.FeaturesManagementDashboard.Infrastructure.Extensions;
 using Umbraco.Cms.Core.DependencyInjection;
 
-namespace Module.FeaturesManagementDashboard
+namespace FeaturesManagementDashboard
 {
     internal class ModuleStartup
     {
