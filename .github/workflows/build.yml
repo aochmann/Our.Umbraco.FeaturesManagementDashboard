@@ -69,11 +69,13 @@ jobs:
 
       - name: Create NuGet package file
         run: |
-          dotnet pack
-            -c Release
-            --include-symbols
-            -o NugetBuild
-            /p:version=${{ env.VERSION }}
+          dotnet pack \
+            -c Release \
+            --include-symbols \
+            --no-restore \
+            -o ${{ env.NUGET_OUTPUT }} \
+            /p:Version=${{ env.VERSION }} \
+            /p:AssemblyVersion=${{ env.VERSION }} \
 
       - name: Upload build artifact
         if: ${{ github.event_name != 'pull_request' }}
