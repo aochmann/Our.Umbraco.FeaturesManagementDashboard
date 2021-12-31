@@ -16,7 +16,20 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Deterministic>true</Deterministic>
     <BuildInParallel>false</BuildInParallel>
+    <PackageProjectUrl>https://github.com/aochmann/Umbraco.FeatureManagementDashboard</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/aochmann/Umbraco.FeatureManagementDashboard.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
+  </ItemGroup>
 
   <!-- Additional files which are consumed by all projects -->
   <ItemGroup>

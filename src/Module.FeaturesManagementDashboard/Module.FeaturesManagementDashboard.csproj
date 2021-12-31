@@ -8,13 +8,11 @@
     <Description>Feature Management dashboard for Umbraco 9</Description>
     <Product>Feature Management dashboard for Umbraco 9</Product>
     <PackageTags>umbraco plugin package feature management toggle</PackageTags>
-    <Version>9.0.0</Version>
+    <Version></Version>
     <Authors>Adrian Ochmann, Marcin Zajkowski</Authors>
+    <Owners>Adrian Ochmann, Marcin Zajkowski</Owners>
     <Copyright>Copyright (c) Adrian Ochmann, Marcin Zajkowski</Copyright>
     <Company></Company>
-    <PackageProjectUrl>https://github.com/aochmann/Umbraco.FeatureManagementDashboard</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/aochmann/Umbraco.FeatureManagementDashboard</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
