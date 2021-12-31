@@ -49,11 +49,7 @@ jobs:
 
     - name: Get tag
       run: |
-        echo "Describe: $(git describe)"
-        echo "Rev parse: $(git rev-parse $GITHUB_REF~0)"
-
-        tag_check=$(git describe --exact-match `git rev-parse $GITHUB_REF~0`)
-        echo "tag=$tag_check" >> $GITHUB_ENV
+        echo "TAG::${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
 
     - name: Install dependencies
       run: |
@@ -67,7 +63,7 @@ jobs:
     - name: Commit updated package.json
       run: |
         git add .
-        git commit -m "${{ env.tag }}" --no-verify
+        git commit -m "${{ env.TAG }}" --no-verify
 
     - name: Generate changelog
       run: |
@@ -80,12 +76,12 @@ jobs:
 
     - name: Remove tag
       run: |
-        git tag -d ${{ env.tag }}
+        git tag -d ${{ env.TAG }}
 
     - name: Updating tags
       run: |
         git pull "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" master
-        git tag -a ${{ env.tag }} -m "${{ env.tag }}"
+        git tag -a ${{ env.TAG }} -m "${{ env.TAG }}"
         git push "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" --tag -f
 
     - name: Pushing latest changes to master
