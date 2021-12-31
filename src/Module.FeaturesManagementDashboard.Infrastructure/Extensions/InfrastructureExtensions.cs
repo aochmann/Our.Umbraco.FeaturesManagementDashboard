@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using FeaturesManagementDashboard.Application.Commands;
 using FeaturesManagementDashboard.Application.Queries;
-using FeaturesManagementDashboard.Infrastructure;
 using FeaturesManagementDashboard.Infrastructure.HandlerDispatchers;
 using Lamar;
 using MediatR;
@@ -32,6 +31,8 @@ namespace FeaturesManagementDashboard.Infrastructure.Extensions
                 .AddFeatureManagement()
                 .AddFeatureFilter<PercentageFilter>()
                 .AddFeatureFilter<TimeWindowFilter>();
+
+            _ = umbracoBuilder.AddDashboard();
 
             return registry.AddInfrastructure(umbracoBuilder.Config);
         }

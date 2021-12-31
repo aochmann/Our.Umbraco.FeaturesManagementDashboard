@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Umbraco.Cms.Core.Dashboards;
 using Umbraco.Cms.Core.DependencyInjection;
 
 namespace FeaturesManagementDashboard.Infrastructure.Dashboards.CollectionBuilders
