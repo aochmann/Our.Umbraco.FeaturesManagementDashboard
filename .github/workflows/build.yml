@@ -25,9 +25,10 @@ jobs:
       PROJECT_NAME: '${GITHUB_REPOSITORY#*/}'
       VERSION: '1.0.0'
 
-      # Nuget Setup
+      # Release Setup
       NUGET_VERSION: 'latest'
-      NUGET_OUTPUT: '.output'
+      NUGET_OUTPUT: '.nuget_output'
+      BINARIES_OUTPUT: '.binaries_output'
 
     steps:
       - name: Checkout reference commit
@@ -65,9 +66,20 @@ jobs:
 
       - name: Build
         run: |
-          dotnet build -c ${{ env.CONFIG }} --no-restore
+          dotnet build \
+            -c ${{ env.CONFIG }} \
+            --no-restore
+
+      - name: Publish
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          dotnet publish \
+            -o ${{ env.BINARIES_OUTPUT }}
+            -c ${{ env.CONFIG }} \
+            --no-restore
 
       - name: Create NuGet package file
+        if: ${{ github.event_name != 'pull_request' }}
         run: |
           dotnet pack \
             -c Release \
@@ -77,9 +89,16 @@ jobs:
             /p:Version=${{ env.VERSION }} \
             /p:AssemblyVersion=${{ env.VERSION }} \
 
-      - name: Upload build artifact
+      - name: Upload NuGet artifact
+        if: ${{ github.event_name != 'pull_request' }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: nuget_${{ env.PROJECT_NAME }}.${{ env.VERSION }}
+          path: ${{ github.workspace }}/${{ env.NUGET_OUTPUT }}/**/*
+
+      - name: Upload Build artifact
         if: ${{ github.event_name != 'pull_request' }}
         uses: actions/upload-artifact@v2
         with:
           name: build_${{ env.PROJECT_NAME }}.${{ env.VERSION }}
-          path: ${{ github.workspace }}/${{ env.NUGET_OUTPUT }}/**/*
+          path: ${{ github.workspace }}/${{ env.BINARIES_OUTPUT }}/**/*
