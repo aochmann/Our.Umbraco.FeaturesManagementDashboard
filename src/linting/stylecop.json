@@ -4,8 +4,8 @@
     "maintainabilityRules": {},
     "indentation": {},
     "documentationRules": {
-      "companyName": "Adrian Ochmann",
-      "copyrightText": "Copyright (c) 2021 {companyName}\nSee LICENSE for more details.",
+      "companyName": "Adrian Ochmann and Marcin Zajkowski",
+      "copyrightText": "Copyright (c) 2022 {companyName}\nSee LICENSE for more details.",
       "headerDecoration": "-----------------------------------------------------------------",
       "xmlHeader": true,
       "documentInterfaces": false,
