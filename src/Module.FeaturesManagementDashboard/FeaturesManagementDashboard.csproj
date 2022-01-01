@@ -65,4 +65,10 @@
       <PackagePath>buildTransitive</PackagePath>
     </None>
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update="our.package.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
