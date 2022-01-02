@@ -5,7 +5,7 @@
     </area>
     <area alias="featureManagementDashboard">
         <key alias="title">Feature Management Dashboard</key>
-        <key alias="description">Future management tool for Umbraco. A feature toggle/feature switch/feature flag/feature gate/etc. is a technique that provides functions to hide, enable or disable the feature during runtime.</key>
+        <key alias="description">Future management tool for Umbraco. A feature flags a technique that provides functions to hide, enable or disable the feature during runtime.</key>
         <key alias="column_status">Status</key>
         <key alias="column_name">Feature Name</key>
     </area>
