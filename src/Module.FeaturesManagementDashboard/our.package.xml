@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<umbPackage>
+    <info>
+        <package>
+            <name>Our.Umbraco.FeaturesManagementDashboard</name>
+            <version>$Version$</version>
+            <iconUrl></iconUrl>
+            <licence url="https://opensource.org/licenses/MIT">MIT</licence>
+            <url>https://github.com/aochmann/Umbraco.FeatureManagementDashboard</url>
+            <requirements type="strict">
+                <major>9</major>
+                <minor>0</minor>
+                <patch>1</patch>
+            </requirements>
+        </package>
+        <author>
+            <name>Adrian Ochmann, Marcin Zajkowski</name>
+            <website>https://github.com/aochmann/Umbraco.FeatureManagementDashboard</website>
+        </author>
+        <readme><![CDATA[Feature Management dashboard for Umbraco 9]]></readme>
+    </info>
+    <files>
+        <file path="FeaturesManagementDashboard.dll" orgPath="bin/FeaturesManagementDashboard.dll" />
+        <file path="FeaturesManagementDashboard.Application.dll" orgPath="bin/FeaturesManagementDashboard.Application.dll" />
+        <file path="FeaturesManagementDashboard.Domain.dll" orgPath="bin/FeaturesManagementDashboard.Domain.dll" />
+        <file path="FeaturesManagementDashboard.Infrastructure.dll" orgPath="bin/FeaturesManagementDashboard.Infrastructure.dll" />
+        <file path="SharedAbstractions.dll" orgPath="bin/SharedAbstractions.dll" />
+        <file path="Shared.dll" orgPath="bin/Shared.dll" />
+        <file path="Dapper.dll" orgPath="bin/Dapper.dll" />
+        <file path="DapperExtensions.dll" orgPath="bin/DapperExtensions.dll" />
+        <file path="Lamar.dll" orgPath="bin/Lamar.dll" />
+        <file path="LamarCodeGeneration.dll" orgPath="bin/LamarCodeGeneration.dll" />
+        <file path="Lamar.Microsoft.DependencyInjection.dll" orgPath="bin/Lamar.Microsoft.DependencyInjection.dll" />
+        <file path="MediatR.dll" orgPath="bin/MediatR.dll" />
+        <file path="Scrutor.dll" orgPath="bin/Scrutor.dll" />
+        <file path="Microsoft.FeatureManagement.dll" orgPath="bin/Microsoft.FeatureManagement.dll" />
+        <folder path="App_Plugins/FeatureManagementDashboard" orgPath="App_Plugins/FeatureManagementDashboard" />
+    </files>
+    <Actions />
+    <control />
+    <DocumentTypes />
+    <Templates />
+    <Stylesheets />
+    <Macros />
+    <DictionaryItems />
+    <Languages />
+    <DataTypes />
+</umbPackage>

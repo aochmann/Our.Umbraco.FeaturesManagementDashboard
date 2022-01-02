@@ -82,6 +82,7 @@ jobs:
           dotnet publish \
             -o ${{ env.BINARIES_OUTPUT }}
             -c ${{ env.CONFIG }} \
+            -f net5.0 \
             --no-restore
 
       - name: Create NuGet package file
