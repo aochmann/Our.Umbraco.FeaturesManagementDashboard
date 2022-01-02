@@ -1,0 +1,1 @@
+Local feed source directory for NuGet packages available to search and install in projects.

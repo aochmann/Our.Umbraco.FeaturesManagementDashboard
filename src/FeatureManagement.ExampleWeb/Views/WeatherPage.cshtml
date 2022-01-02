@@ -1,0 +1,11 @@
+﻿@using FeatureManagement.ExampleWeb.Views.Components.Weather
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = "Master";
+}
+
+<div id="weather">
+    <h1>Weather</h1>
+
+    @(await Component.InvokeAsync<WeatherViewComponent>())
+</div>

@@ -210,3 +210,15 @@ appsettings.json
 !src/**/.editorconfig
 src/.editorconfig
 !**/*.json
+**/DesignTimeBuild/*.*
+**/*.futdcache*
+**/wwwroot/**/*.*
+**/.vs/**/*.bin
+**/.vs/**/config/applicationhost.config
+**/.vs/**/v17/HierarchyCache.*.txt
+
+.vs/VSWorkspaceState.json
+
+.vs/ProjectSettings.json
+
+.vs/slnx.sqlite

@@ -1,0 +1,16 @@
+{
+    "cSpell.words": [
+        "appsettings",
+        "Backoffice",
+        "commitlint",
+        "Initialises",
+        "Mediat",
+        "Serilog",
+        "Smidge",
+        "umbrac"
+    ],
+    "files.exclude": {
+        "**/obj/**/*.*": true,
+        "**/umbraco/**/*.*": true
+    }
+}
