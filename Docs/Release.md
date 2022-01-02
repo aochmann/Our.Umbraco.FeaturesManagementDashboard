@@ -6,8 +6,10 @@ Follow the general standards with [GitFlow](../.github/workflows/gitflow.yml) an
 1. Perform the adjustments on the branch if needed e.g. last fixes related with the **release**.
 1. Add an **annotated tag** with the release number (e.g. _2.9.11_) on the release branch and push tag to the origin.
 1. The above step should trigger the **automation on Github** and regenerate changelog + move the tag to the master branch.
-1. After that it will create and publish NuGet (based on nuspec files) package for feeds:
-   1. GitHub Packages
+1. After that it will create and publish NuGet package for feeds:
+   1. **NuGet**
+   1. **GitHub Packages**
+   1. **Our.Umbraco**
 
 ```mermaid
 sequenceDiagram
