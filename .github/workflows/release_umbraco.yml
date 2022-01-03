@@ -27,8 +27,8 @@ jobs:
       NUGET_VERSION: 'latest'
       BINARIES_OUTPUT: '.binaries_output'
       UMBRACO_PACKAGE: 'our.package.yml'
-      UMBRACO_OUTPUT: '${{ github.workspace }}/.output/umbraco/'
-      UMBRACO_OUTPUT_EXTRACTED: '${{ github.workspace }}/.output/umbraco/extracted'
+      UMBRACO_OUTPUT: '${{ github.workspace }}\.output\umbraco'
+      UMBRACO_OUTPUT_EXTRACTED: '${{ github.workspace }}\.output\umbraco\extracted'
       UMBRACO_TOKEN: ${{ secrets.UMBRACO_TOKEN }}
 
     steps:
@@ -71,7 +71,7 @@ jobs:
             dotnet umbpack pack $package `
              -v ${{ env.VERSION }} `
              -n ${{ env.PROJECT_NAME }}.${{ env.VERSION }}.zip `
-             -o ${{ env.UMBRACO_OUTPUT }}
+             -o ${{ env.UMBRACO_OUTPUT }}\
 
              cd $currentDirectory
           }
