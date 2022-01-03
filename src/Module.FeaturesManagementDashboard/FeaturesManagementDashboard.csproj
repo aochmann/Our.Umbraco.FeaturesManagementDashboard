@@ -9,7 +9,7 @@
     <PackageTags>umbraco plugin package feature management toggle</PackageTags>
     <Version></Version>
     <Authors>Adrian Ochmann, Marcin Zajkowski</Authors>
-    <Owners>Adrian Ochmann, Marcin Zajkowski</Owners>
+    <Owners>adrian.ochmann, mzajkowski</Owners>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
