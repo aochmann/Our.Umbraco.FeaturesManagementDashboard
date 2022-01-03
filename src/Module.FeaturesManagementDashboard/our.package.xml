@@ -6,7 +6,7 @@
             <version>$Version$</version>
             <iconUrl></iconUrl>
             <licence url="https://opensource.org/licenses/MIT">MIT</licence>
-            <url>https://github.com/aochmann/Umbraco.FeatureManagementDashboard</url>
+            <url>https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard</url>
             <requirements type="strict">
                 <major>9</major>
                 <minor>0</minor>
@@ -15,7 +15,7 @@
         </package>
         <author>
             <name>Adrian Ochmann, Marcin Zajkowski</name>
-            <website>https://github.com/aochmann/Umbraco.FeatureManagementDashboard</website>
+            <website>https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard</website>
         </author>
         <readme><![CDATA[Feature Management dashboard for Umbraco 9]]></readme>
     </info>
