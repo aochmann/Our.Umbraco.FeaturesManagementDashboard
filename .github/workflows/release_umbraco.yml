@@ -60,27 +60,18 @@ jobs:
 
       - name: Build Our Package
         shell: powershell
+        working-directory: ${{ env.BINARIES_OUTPUT }}
         run: |
-          $currentDirectory=$PWD
-
-          $packages = Get-ChildItem -Path ${{ env.BINARIES_OUTPUT }} -Recurse -Include ${{ env.UMBRACO_PACKAGE }}
-
-          foreach ($package in $packages){
-            cd "$($package.Directory.FullName)"
-
-            dotnet umbpack pack $package `
+          dotnet umbpack pack our.package.xml `
              -v ${{ env.VERSION }} `
              -n ${{ env.PROJECT_NAME }}.${{ env.VERSION }}.zip `
-             -o ${{ env.UMBRACO_OUTPUT }}\
-
-             cd $currentDirectory
-          }
+             -o ${{ env.UMBRACO_OUTPUT }}
 
       - name: Extract Zip
         shell: powershell
+        working-directory: ${{ env.UMBRACO_OUTPUT }}
         run: |
-          $umbracoOurPath="${{ env.UMBRACO_OUTPUT }}\${{ env.PROJECT_NAME }}.${{ env.VERSION }}.zip"
-          Expand-Archive -Path $umbracoOurPath -DestinationPath ${{ env.UMBRACO_OUTPUT_EXTRACTED }}
+          Expand-Archive -Path ${{ env.PROJECT_NAME }}.${{ env.VERSION }}.zip -DestinationPath ${{ env.UMBRACO_OUTPUT_EXTRACTED }}
 
       - name: Upload Our.Umbraco package Artifact
         uses: actions/upload-artifact@v2
