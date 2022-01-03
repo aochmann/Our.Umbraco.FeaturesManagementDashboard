@@ -4,24 +4,7 @@
 
 This package adds feature management dashboard into **Umbraco** backoffice. It use as feature management the Microsoft Feature Flags engine  - more information about [Microsoft Feature Flags Tutorial](https://docs.microsoft.com/en-us/azure/azure-app-configuration/use-feature-flags-dotnet-core?tabs=core5x).
 
----
-
-<details open="open">
-<summary>Table of Contents</summary>
-
-- [Getting Started](#getting-started)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contribution guidelines](#contribution)
-- [Changelog](#changelog)
-- [Notes](#notes)
-- [License](#license)
-
-</details>
-
----
-
-## Getting Started 💫 <a name = "getting-started"></a>
+## Getting Started 💫
 
 This package is supported on Umbraco 9.0.1 and is available for `net5.0` and `net6.0`.
 
@@ -29,7 +12,7 @@ Umbraco backoffice credentials:
  * login: `admin@admin.com`
  * password: `adminadmin`
 
-## Installation 🎊 <a name = "installation"></a>
+## Installation 🎊
 
 `Our.Umbraco.FeaturesManagementDashboard` is available from: `NuGet`, `GitHub Packages` and `Our.Umbraco`.
 
@@ -55,7 +38,7 @@ For now there isn't public token for installing from this repository. Please go 
 
 In backoffice search and install package.
 
-## Usage 🔥<a name = "usage"></a>
+## Usage 🔥
 
 After installing the package you will need to enable package in `appsettings.json` and perform some features configuration.
 
@@ -149,16 +132,16 @@ There are few options to setup feature flags in code:
 
 To raise a new bug, create an [issue on the GitHub repository](https://github.com/aochmann/Our.Umbraco.FeatureManagementDashboard/issues/new?assignees=&labels=&template=bug_report.md&title=). To fix a bug or add new features, fork the repository and send a pull request with your changes. Feel free to add [ideas to the repository's issues list](https://github.com/aochmann/Our.Umbraco.FeatureManagementDashboard/issues/new?assignees=&labels=&template=feature_request.md&title=) if you would to discuss anything related to the package.
 
-## Changelog <a name = "changelog"></a>
+## Changelog 📖
 
 All notable changes to this project can be found in [CHANGELOG.md](CHANGELOG.md).
 
-## Notes 📝 <a name = "notes"></a>
+## Notes 📝
 
 Future work:
  * adding more feature flags declaration types
  * adding adapters for custom integration with Umbraco functionalities, like [Matthew Wise feature flagging package](https://github.com/Matthew-Wise/feature-flagging-umbraco) #h5yr :raised_hands:
 
-## License 📜 <a name = "license"></a>
+## License 📜
 
 Licensed under the [MIT License](LICENSE.md).
