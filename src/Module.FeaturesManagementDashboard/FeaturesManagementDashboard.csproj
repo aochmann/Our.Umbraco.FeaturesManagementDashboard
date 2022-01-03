@@ -11,7 +11,12 @@
     <Authors>Adrian Ochmann, Marcin Zajkowski</Authors>
     <Owners>adrian.ochmann, mzajkowski</Owners>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 
   <ItemGroup>
     <None Remove="App_Plugins\FeatureManagementDashboard\dashboard.controller.js" />
