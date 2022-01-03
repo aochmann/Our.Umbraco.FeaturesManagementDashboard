@@ -1,3 +1,13 @@
+## [1.0.2](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/compare/1.0.1...1.0.2) (2022-01-03)
+
+
+### Bug Fixes
+
+* fixed our umbraco release process ([eb1165b](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/commit/eb1165b10e598572097df23f7306fe591a3e457c))
+* fixed wrong repo url ([e6198c1](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/commit/e6198c1e78b6d089d3ddea9632b4c80ffdeb740d))
+
+
+
 ## [1.0.1](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/compare/1.0.0...1.0.1) (2022-01-03)
 
 
