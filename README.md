@@ -128,7 +128,7 @@ There are few options to setup feature flags in code:
 
     For other options and more information please see [Microsoft Feature Flags documentation](https://docs.microsoft.com/en-us/azure/azure-app-configuration/use-feature-flags-dotnet-core?tabs=core5x#middleware).
 
-## Contribution guidelines ⛏ <a name = "contribution"></a>
+## Contribution guidelines ⛏
 
 To raise a new bug, create an [issue on the GitHub repository](https://github.com/aochmann/Our.Umbraco.FeatureManagementDashboard/issues/new?assignees=&labels=&template=bug_report.md&title=). To fix a bug or add new features, fork the repository and send a pull request with your changes. Feel free to add [ideas to the repository's issues list](https://github.com/aochmann/Our.Umbraco.FeatureManagementDashboard/issues/new?assignees=&labels=&template=feature_request.md&title=) if you would to discuss anything related to the package.
 
