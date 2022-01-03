@@ -1,3 +1,12 @@
+## [1.0.4](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/compare/1.0.3...1.0.4) (2022-01-03)
+
+
+### Bug Fixes
+
+* fixed paths for our.umbraco workflow ([279bca3](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/commit/279bca35b3283070d16a2e39e18f4ba03327ec37))
+
+
+
 ## [1.0.3](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/compare/1.0.2...1.0.3) (2022-01-03)
 
 
