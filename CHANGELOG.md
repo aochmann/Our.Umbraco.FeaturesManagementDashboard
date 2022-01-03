@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/compare/1.0.2...1.0.3) (2022-01-03)
+
+
+### Bug Fixes
+
+* fixed our umbraco diretory paths ([0b35180](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/commit/0b3518099b74addeb1505a4c1198fb1a96e5f589))
+
+
+
 ## [1.0.2](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/compare/1.0.1...1.0.2) (2022-01-03)
 
 
