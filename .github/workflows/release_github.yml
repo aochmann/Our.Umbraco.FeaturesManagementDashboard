@@ -18,7 +18,7 @@ jobs:
       GITHUB_PACKAGES_OUTPUT: ${{ github.workspace }}/github_packages
 
       # Project Setup
-      PROJECT_NAME: '${GITHUB_REPOSITORY#*/}'
+      PROJECT_NAME: ${{ github.event.repository.name }}
 
     steps:
       - name: Checkout master

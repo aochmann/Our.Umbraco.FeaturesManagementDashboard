@@ -18,7 +18,7 @@ jobs:
       NUGET_FEED: https://api.nuget.org/v3/index.json
 
       # Project Setup
-      PROJECT_NAME: '${GITHUB_REPOSITORY#*/}'
+      PROJECT_NAME: ${{ github.event.repository.name }}
 
     steps:
       - name: Checkout master
