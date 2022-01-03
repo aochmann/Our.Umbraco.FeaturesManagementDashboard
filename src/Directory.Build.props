@@ -6,8 +6,8 @@
     <Company>Adrian Ochmann and Marcin Zajkowski</Company>
     <Authors>$(Company)</Authors>
     <Copyright>Copyright (c) $(Company) $([System.DateTime]::Now.Year)</Copyright>
-    <PackageProjectUrl>https://github.com/aochmann/Umbraco.FeatureManagementDashboard</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/aochmann/Umbraco.FeatureManagementDashboard.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
