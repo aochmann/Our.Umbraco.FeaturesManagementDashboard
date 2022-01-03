@@ -46,7 +46,8 @@ jobs:
         if: ${{ github.event_name != 'pull_request' }}
         shell: bash
         run: |
-          echo "VERSION::${GITHUB_REF/refs\/head\/release\//}" >> $GITHUB_ENV
+          tag_check=$(git describe --exact-match `git rev-parse HEAD` | head -1)
+          echo "VERSION=$tag_check" >> $GITHUB_ENV
 
       - uses: actions/setup-node@v2
         with:

@@ -49,7 +49,10 @@ jobs:
 
     - name: Get tag
       run: |
-        echo "TAG::${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+        echo "Describe: $(git describe)"
+        echo "Rev parse: $(git rev-parse $GITHUB_REF~0)"
+        tag_check=$(git describe --exact-match `git rev-parse $GITHUB_REF~0`)
+        echo "TAG=$tag_check" >> $GITHUB_ENV
 
     - name: Install dependencies
       run: |
