@@ -10,7 +10,7 @@ jobs:
   our_umbraco:
     name: Our.Umbraco Package Generation
     if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event != 'pull_request' }}
-    runs-on: ubuntu-20.04
+    runs-on: windows-2022
     env:
       # Stop wasting time caching packages
       DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
@@ -49,6 +49,11 @@ jobs:
         with:
           name: build_${{ env.PROJECT_NAME }}.${{ env.VERSION }}
           path: ${{ env.BINARIES_OUTPUT }}
+
+      - name: Setup .NET 3.1.x
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.x'
 
       - name: Install tools
         run: dotnet tool restore
