@@ -104,7 +104,7 @@ After adding `Override: true` option it will each time override Umbraco feature 
 
 In backoffice there will be present `Feature Management Dashboard` under `Settings` section.
 
-![Backoffice section](Docs/Images/backoffice_section.png)
+![Backoffice section](https://raw.githubusercontent.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/develop/Docs/Images/backoffice_section.png)
 
 #### Feature Flags configuration
 
