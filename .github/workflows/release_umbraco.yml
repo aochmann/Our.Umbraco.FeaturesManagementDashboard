@@ -60,12 +60,12 @@ jobs:
 
           $packages = Get-ChildItem -Path ${{ env.BINARIES_OUTPUT }} -Recurse -Include ${{ env.UMBRACO_PACKAGE }}
 
-          foreach ($package in $solutions){
+          foreach ($package in $packages){
             cd "$($package.Directory.FullName)"
 
-            dotnet umbpack pack $package \
-             -v ${{ env.VERSION }} \
-             -n ${{ env.PROJECT_NAME }}.${{ env.VERSION }}.zip \
+            dotnet umbpack pack $package `
+             -v ${{ env.VERSION }} `
+             -n ${{ env.PROJECT_NAME }}.${{ env.VERSION }}.zip `
              -o ${{ env.UMBRACO_OUTPUT }}
 
              cd $currentDirectory
@@ -84,6 +84,7 @@ jobs:
           path: ${{ env.UMBRACO_OUTPUT_EXTRACTED }}
 
       - name: Publish to Our.Umbraco
+        if: env.UMBRACO_TOKEN != null
         working-directory: ${{ env.UMBRACO_OUTPUT }}
         run: |
           dotnet umbpack push ${{ env.PROJECT_NAME }}.${{ env.VERSION }}.zip -w v901 --DotNetVersion=5.0.9 -k ${{ env.UMBRACO_TOKEN }}
