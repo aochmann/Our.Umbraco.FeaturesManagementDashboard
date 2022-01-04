@@ -1,7 +1,8 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using FeaturesManagementDashboard.Infrastructure.Dashboards;
-using FeaturesManagementDashboard.Infrastructure.Dashboards.CollectionBuilders;
+using FeaturesManagementDashboard.Infrastructure.Services;
 using Umbraco.Cms.Core.DependencyInjection;
+using Umbraco.Cms.Core.Services;
+using Umbraco.Extensions;
 
 namespace FeaturesManagementDashboard.Infrastructure.Extensions
 {
@@ -9,8 +10,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Extensions
     {
         public static IUmbracoBuilder AddDashboard([NotNull] this IUmbracoBuilder builder)
         {
-            _ = builder.WithFeatureManagementDashboard()
-                                     .Add<FeatureManagementDashboard>();
+            builder.Services.AddUnique<IDashboardService, CustomDashboardService>();
 
             return builder;
         }
