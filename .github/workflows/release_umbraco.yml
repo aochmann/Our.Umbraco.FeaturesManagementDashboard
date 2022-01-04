@@ -83,7 +83,10 @@ jobs:
         if: env.UMBRACO_TOKEN != null
         working-directory: ${{ env.UMBRACO_OUTPUT }}
         run: |
-          dotnet umbpack push ${{ env.PROJECT_NAME }}.${{ env.VERSION }}.zip -w v901 --DotNetVersion=5.0.9 -k ${{ env.UMBRACO_TOKEN }}
+          dotnet umbpack push ${{ env.PROJECT_NAME }}.${{ env.VERSION }}.zip `
+            -w v901,v1000,v920,v910 `
+            --DotNetVersion=5.0.9 `
+            -k ${{ env.UMBRACO_TOKEN }}
         continue-on-error: true
 
 
