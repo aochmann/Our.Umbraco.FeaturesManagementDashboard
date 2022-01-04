@@ -1,3 +1,17 @@
+## [1.0.5](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/compare/1.0.4...1.0.5) (2022-01-04)
+
+
+### Bug Fixes
+
+* changed tab key with proper dashboard alias ([d52bfb3](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/commit/d52bfb3a08a42b411dd6184689a61debf9e08bd7))
+
+
+### Features
+
+* reduced collection builder ([b193dc3](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/commit/b193dc3d0c44c9a22c5ef04359f4199d6fba7f98))
+
+
+
 ## [1.0.4](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/compare/1.0.3...1.0.4) (2022-01-03)
 
 
