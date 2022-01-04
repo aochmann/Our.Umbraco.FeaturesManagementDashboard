@@ -7,7 +7,8 @@ namespace FeaturesManagementDashboard.Infrastructure.Dashboards
     [Weight(80)]
     public class FeatureManagementDashboard : IDashboard
     {
-        public string Alias => "Our.Umbraco.FeaturesManagementDashboard";
+        public const string DashboardAlias = "Our.Umbraco.FeaturesManagementDashboard";
+        public string Alias => DashboardAlias;
 
         public string[] Sections => new[]
         {
