@@ -487,3 +487,6 @@ $RECYCLE.BIN/
 **/wwwroot/umbraco/
 
 App_Plugins/FeatureManagementDashboard/**/*.*
+
+**/wwwroot/
+**/umbraco/

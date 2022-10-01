@@ -2,9 +2,13 @@
   <PropertyGroup>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
-  
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net7.0'">
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(TargetFramework)' == 'net6.0'">
     <Nullable>disable</Nullable>
   </PropertyGroup>
-  
+
 </Project>
