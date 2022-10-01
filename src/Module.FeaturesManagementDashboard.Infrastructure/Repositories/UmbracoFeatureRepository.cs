@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using DapperExtensions;
@@ -8,32 +7,50 @@ using FeaturesManagementDashboard.Application.DTO.Features;
 using FeaturesManagementDashboard.Domain.Entities.Features;
 using FeaturesManagementDashboard.Domain.Repositories;
 using FeaturesManagementDashboard.Infrastructure.Mappers;
-using Umbraco.Cms.Core.Configuration;
+#if NET6_0
+using Microsoft.Data.SqlClient;
+#endif
+#if NET5_0
+using System.Data.SqlClient;
+#endif
 using Umbraco.Cms.Core.Configuration.Models;
 
 namespace FeaturesManagementDashboard.Infrastructure.Repositories
 {
     internal class UmbracoFeatureRepository : IUmbracoFeatureRepository
     {
-        private readonly ConfigConnectionString _umbracoConnectionString;
+        private readonly string _umbracoConnectionString;
         private readonly IFeatureItemMapper _featureItemMapper;
         private readonly IFeatureItemsMapper _featureItemsMapper;
         private readonly IFeatureItemDtoMapper _featureDtoMapper;
 
+#if NET6_0
         public UmbracoFeatureRepository(ConnectionStrings connectionStrings,
             IFeatureItemMapper featureItemMapper,
             IFeatureItemsMapper featureItemsMapper,
             IFeatureItemDtoMapper featureDtoMapper)
         {
-            _umbracoConnectionString = connectionStrings.UmbracoConnectionString;
+            _umbracoConnectionString = connectionStrings!.ConnectionString!;
             _featureItemMapper = featureItemMapper;
             _featureItemsMapper = featureItemsMapper;
             _featureDtoMapper = featureDtoMapper;
         }
-
+#endif
+#if NET5_0
+        public UmbracoFeatureRepository(ConnectionStrings connectionStrings,
+            IFeatureItemMapper featureItemMapper,
+            IFeatureItemsMapper featureItemsMapper,
+            IFeatureItemDtoMapper featureDtoMapper)
+        {
+            _umbracoConnectionString = connectionStrings.UmbracoConnectionString.ConnectionString;
+            _featureItemMapper = featureItemMapper;
+            _featureItemsMapper = featureItemsMapper;
+            _featureDtoMapper = featureDtoMapper;
+        }
+#endif
         public async ValueTask<bool> ExistsAsync(FeatureId featureId)
         {
-            using var connection = new SqlConnection(_umbracoConnectionString.ConnectionString);
+            using var connection = new SqlConnection(_umbracoConnectionString);
 
             var idPrediction = Predicates.Field<FeatureDto>(field => field.Id, DapperExtensions.Predicate.Operator.Eq, featureId.Id);
 
@@ -47,7 +64,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Repositories
         {
             try
             {
-                using var connection = new SqlConnection(_umbracoConnectionString.ConnectionString);
+                using var connection = new SqlConnection(_umbracoConnectionString);
 
                 var features = await connection.GetListAsync<FeatureDto>();
 
@@ -66,7 +83,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Repositories
         {
             try
             {
-                using var connection = new SqlConnection(_umbracoConnectionString.ConnectionString);
+                using var connection = new SqlConnection(_umbracoConnectionString);
 
                 var idPrediction = Predicates.Field<FeatureDto>(field => field.Id, DapperExtensions.Predicate.Operator.Eq, featureId.Id);
 
@@ -90,7 +107,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Repositories
             {
                 var featureExists = await ExistsAsync(feature.Id);
 
-                using var connection = new SqlConnection(_umbracoConnectionString.ConnectionString);
+                using var connection = new SqlConnection(_umbracoConnectionString);
 
                 var featureDto = _featureDtoMapper.Map(feature);
 
