@@ -2,13 +2,15 @@
   <PropertyGroup>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
-  <ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
     <PackageReference Include="MediatR" Version="9.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
     <PackageReference Include="Lamar" Version="6.0.0" />
     <PackageReference Include="Lamar.Microsoft.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Umbraco.Cms.Core" Version="9.0.1" />
   </ItemGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\SharedAbstractions\SharedAbstractions.csproj" />
     <ProjectReference Include="..\Module.FeaturesManagementDashboard.Domain\FeaturesManagementDashboard.Domain.csproj" />

@@ -2,9 +2,11 @@
   <PropertyGroup>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
+  
   <PropertyGroup Condition="'$(TargetFramework)' == 'net6.0'">
     <Nullable>disable</Nullable>
   </PropertyGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\SharedAbstractions\SharedAbstractions.csproj" />
   </ItemGroup>
