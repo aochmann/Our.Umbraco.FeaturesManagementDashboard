@@ -8,7 +8,7 @@
             <licence url="https://opensource.org/licenses/MIT">MIT</licence>
             <url>https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard</url>
             <requirements type="strict">
-                <major>9</major>
+                <major>10</major>
                 <minor>0</minor>
                 <patch>1</patch>
             </requirements>
@@ -17,7 +17,7 @@
             <name>Adrian Ochmann, Marcin Zajkowski</name>
             <website>https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard</website>
         </author>
-        <readme><![CDATA[Feature Management dashboard for Umbraco 9]]></readme>
+        <readme><![CDATA[Feature Management dashboard for Umbraco 9/10]]></readme>
     </info>
     <files>
         <file path="FeaturesManagementDashboard.dll" orgPath="bin/FeaturesManagementDashboard.dll" />
