@@ -1,9 +1,10 @@
-﻿using MediatR;
+﻿using System.Threading.Tasks;
 
 namespace FeaturesManagementDashboard.Application.Queries
 {
-    public interface IQueryHandler<in TQuery, TResult> : IRequestHandler<TQuery, TResult>
-        where TQuery : class, IRequest<TResult>
+    public interface IQueryHandler<in TQuery, TResult>
+        where TQuery : class, IQuery<TQuery, TResult>
     {
+        ValueTask<TResult> HandleAsync(TQuery query);
     }
 }

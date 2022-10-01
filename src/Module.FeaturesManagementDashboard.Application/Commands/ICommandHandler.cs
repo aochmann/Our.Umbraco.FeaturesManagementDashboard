@@ -1,9 +1,10 @@
-﻿using MediatR;
+﻿using System.Threading.Tasks;
 
 namespace FeaturesManagementDashboard.Application.Commands
 {
-    public interface ICommandHandler<in TCommand> : INotificationHandler<TCommand>
+    public interface ICommandHandler<in TCommand>
         where TCommand : class, ICommand
     {
+        ValueTask HandleAsync(TCommand command);
     }
 }

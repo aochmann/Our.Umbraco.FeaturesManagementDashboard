@@ -19,10 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="11.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\SharedAbstractions\SharedAbstractions.csproj" />
     <ProjectReference Include="..\Module.FeaturesManagementDashboard.Domain\FeaturesManagementDashboard.Domain.csproj" />
     <ProjectReference Include="..\Shared\Shared.csproj" />

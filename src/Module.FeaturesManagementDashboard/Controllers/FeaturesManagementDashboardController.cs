@@ -29,7 +29,7 @@ namespace FeaturesManagementDashboard.Controllers
         [HttpGet("features")]
         public async ValueTask<ActionResult<IEnumerable<FeatureDto>>> GetFeatures()
         {
-            var features = await _queryDispatcher.QueryAsync(new GetFeatures());
+            var features = await _queryDispatcher.DispatchAsync(new GetFeatures());
 
             return OkOrNotFound(features);
         }
@@ -37,7 +37,7 @@ namespace FeaturesManagementDashboard.Controllers
         [HttpGet("{featureId:alpha}")]
         public async ValueTask<ActionResult<FeatureDto>> GetFeature([FromRoute] GetFeature query)
         {
-            var featureDefinition = await _queryDispatcher.QueryAsync(query);
+            var featureDefinition = await _queryDispatcher.DispatchAsync(query);
 
             return OkOrNotFound(featureDefinition);
         }

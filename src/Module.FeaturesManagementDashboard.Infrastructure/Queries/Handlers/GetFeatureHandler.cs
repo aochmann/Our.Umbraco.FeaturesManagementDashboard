@@ -19,7 +19,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Queries.Handlers
             _featureDtoMapper = featureDtoMapper;
         }
 
-        public async Task<FeatureDto> Handle(GetFeature query, CancellationToken cancellationToken)
+        public async ValueTask<FeatureDto> HandleAsync(GetFeature query)
         {
             var feature = await _featureRepository.GetAsync(query.FeatureId.ToFeatureId());
 

@@ -1,8 +1,6 @@
-﻿using MediatR;
-
-namespace FeaturesManagementDashboard.Application.Commands
+﻿namespace FeaturesManagementDashboard.Application.Commands
 {
-    public interface ICommand : INotification
+    public interface ICommand
     {
     }
 }

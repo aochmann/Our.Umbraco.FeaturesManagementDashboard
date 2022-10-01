@@ -28,7 +28,6 @@
         <file path="Shared.dll" orgPath="bin/Shared.dll" />
         <file path="Dapper.dll" orgPath="bin/Dapper.dll" />
         <file path="DapperExtensions.dll" orgPath="bin/DapperExtensions.dll" />
-        <file path="MediatR.dll" orgPath="bin/MediatR.dll" />
         <file path="Scrutor.dll" orgPath="bin/Scrutor.dll" />
         <file path="Microsoft.FeatureManagement.dll" orgPath="bin/Microsoft.FeatureManagement.dll" />
         <file path="Microsoft.Extensions.DependencyInjection.dll" orgPath="bin/Microsoft.Extensions.DependencyInjection.dll" />
