@@ -50,10 +50,13 @@ jobs:
           name: build_${{ env.PROJECT_NAME }}.${{ env.VERSION }}
           path: ${{ env.BINARIES_OUTPUT }}
 
-      - name: Setup .NET 3.1.x
-        uses: actions/setup-dotnet@v1
+      - name: Setup .NET 5.0.x-6.0.x
+        uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '3.1.x'
+          dotnet-version: |
+            3.1.x
+            5.0.x
+            6.0.x
 
       - name: Install tools
         run: dotnet tool restore
@@ -63,9 +66,9 @@ jobs:
         working-directory: ${{ env.BINARIES_OUTPUT }}
         run: |
           dotnet umbpack pack our.package.xml `
-             -v ${{ env.VERSION }} `
-             -n ${{ env.PROJECT_NAME }}.${{ env.VERSION }}.zip `
-             -o ${{ env.UMBRACO_OUTPUT }}
+            -v ${{ env.VERSION }} `
+            -n ${{ env.PROJECT_NAME }}.${{ env.VERSION }}.zip `
+            -o ${{ env.UMBRACO_OUTPUT }}
 
       - name: Extract Zip
         shell: powershell
@@ -84,8 +87,8 @@ jobs:
         working-directory: ${{ env.UMBRACO_OUTPUT }}
         run: |
           dotnet umbpack push ${{ env.PROJECT_NAME }}.${{ env.VERSION }}.zip `
-            -w v901,v1000,v920,v910 `
-            --DotNetVersion=5.0.9 `
+            -w v901,v920,v910,v1000,v1021 `
+            --DotNetVersion=6.0.0 `
             -k ${{ env.UMBRACO_TOKEN }}
         continue-on-error: true
 
