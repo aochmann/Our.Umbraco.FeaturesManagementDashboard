@@ -1,12 +1,12 @@
 # Our.Umbraco.FeaturesManagementDashboard
 
-[![Build](https://github.com/aochmann/Our.Umbraco.FeatureManagementDashboard/actions/workflows/build.yml/badge.svg?branch=develop)](https://github.com/aochmann/Our.Umbraco.FeatureManagementDashboard/actions/workflows/build.yml) [![NuGet release](https://img.shields.io/nuget/v/Our.Umbraco.FeaturesManagementDashboard.svg)](https://www.nuget.org/packages/Our.Umbraco.FeaturesManagementDashboard) [![NuGet](https://img.shields.io/nuget/dt/Our.Umbraco.FeaturesManagementDashboard.svg)](https://www.nuget.org/packages/Our.Umbraco.FeaturesManagementDashboard) [![Our Umbraco project page](https://img.shields.io/badge/our-umbraco-orange.svg)](https://our.umbraco.com/packages/backoffice-extensions/ourumbracofeaturesmanagementdashboard/) [![Umbraco version](https://img.shields.io/badge/umbraco->9.0.1-%233544b1)](https://github.com/aochmann/Our.Umbraco.FeatureManagementDashboard)
+[![Build](https://github.com/aochmann/Our.Umbraco.FeatureManagementDashboard/actions/workflows/build.yml/badge.svg?branch=develop)](https://github.com/aochmann/Our.Umbraco.FeatureManagementDashboard/actions/workflows/build.yml) [![NuGet release](https://img.shields.io/nuget/v/Our.Umbraco.FeaturesManagementDashboard.svg)](https://www.nuget.org/packages/Our.Umbraco.FeaturesManagementDashboard) [![NuGet](https://img.shields.io/nuget/dt/Our.Umbraco.FeaturesManagementDashboard.svg)](https://www.nuget.org/packages/Our.Umbraco.FeaturesManagementDashboard) [![Our Umbraco project page](https://img.shields.io/badge/our-umbraco-orange.svg)](https://our.umbraco.com/packages/backoffice-extensions/ourumbracofeaturesmanagementdashboard/) [![Umbraco version](https://img.shields.io/badge/umbraco->=9.0.1-%233544b1)](https://github.com/aochmann/Our.Umbraco.FeatureManagementDashboard) [![Umbraco version](https://img.shields.io/badge/umbraco->=10.0.1-%233544b1)](https://github.com/aochmann/Our.Umbraco.FeatureManagementDashboard)
 
 This package adds feature management dashboard into **Umbraco** backoffice. It use as feature management the Microsoft Feature Flags engine  - more information about [Microsoft Feature Flags Tutorial](https://docs.microsoft.com/en-us/azure/azure-app-configuration/use-feature-flags-dotnet-core?tabs=core5x).
 
 ## Getting Started 💫
 
-This package is supported on Umbraco 9.0.1 and is available for `net5.0` and `net6.0`.
+This package is supported on `Umbraco >=9.0.1` and `Umbraco >=10.0.1` and is available for `net5.0` and `net6.0` (and also as `net7.0` preview).
 
 Umbraco backoffice credentials:
  * login: `admin@admin.com`
