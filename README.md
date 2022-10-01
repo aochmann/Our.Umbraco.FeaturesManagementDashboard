@@ -6,7 +6,7 @@ This package adds feature management dashboard into **Umbraco** backoffice. It u
 
 ## Getting Started 💫
 
-This package is supported on `Umbraco >=9.0.1` and `Umbraco >=10.0.1` and is available for `net5.0` and `net6.0` (and also as `net7.0` preview).
+This package is supported on `Umbraco >=9.0.1` and `Umbraco >=10.0.1` and is available for `net5.0` and `net6.0`.
 
 Umbraco backoffice credentials:
  * login: `admin@admin.com`

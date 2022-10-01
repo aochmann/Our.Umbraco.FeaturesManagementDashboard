@@ -78,6 +78,7 @@ jobs:
         run: |
           dotnet build \
             -c ${{ env.CONFIG }} \
+            -f net6.0
             --no-restore
 
       - name: Publish
@@ -87,6 +88,7 @@ jobs:
             -o ${{ env.BINARIES_OUTPUT }} \
             -c ${{ env.CONFIG }} \
             -f net6.0 \
+            --no-build \
             --no-restore
 
       - name: Create NuGet package file
