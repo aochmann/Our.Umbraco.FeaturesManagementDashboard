@@ -224,3 +224,5 @@ src/.editorconfig
 .vs/slnx.sqlite
 
 **/.idea/
+
+src/FeatureManagement.ExampleWeb/appsettings-schema.json
