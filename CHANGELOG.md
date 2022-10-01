@@ -1,3 +1,26 @@
+# [2.0.0](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/compare/1.0.5...2.0.0) (2022-10-01)
+
+
+### Bug Fixes
+
+* disabled implicit usings ([57b34ab](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/commit/57b34ab87c18f76c401a81c3804b270c441fff7a))
+* removed Lamar dependency ([7b0eb0f](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/commit/7b0eb0fd1d4fb52cc759f77febe78b66ac87f518))
+* removed Lamar dependency ([87705d5](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/commit/87705d585ef4933473e7b71e12b61d1ec6894c29))
+* updated package references for net5 ([5059003](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/commit/5059003ae34766a4bca6ae54410c4e94731cd68f))
+* updated package references for net6 ([2b395b4](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/commit/2b395b485212f42d6a36fe6a29983cfb225a8c51))
+
+
+### Features
+
+* added multi target framework ([1e9fe4a](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/commit/1e9fe4a01ea3c756ed4deab469f9b22df5f47d98))
+
+
+### Reverts
+
+* Revert "chore: updated global" ([581e096](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/commit/581e096e62c2eaa9fd0360190e3315649b5935f6))
+
+
+
 ## [1.0.5](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/compare/1.0.4...1.0.5) (2022-01-04)
 
 
