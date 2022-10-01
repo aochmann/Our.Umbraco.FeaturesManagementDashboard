@@ -28,12 +28,10 @@
         <file path="Shared.dll" orgPath="bin/Shared.dll" />
         <file path="Dapper.dll" orgPath="bin/Dapper.dll" />
         <file path="DapperExtensions.dll" orgPath="bin/DapperExtensions.dll" />
-        <file path="Lamar.dll" orgPath="bin/Lamar.dll" />
-        <file path="LamarCodeGeneration.dll" orgPath="bin/LamarCodeGeneration.dll" />
-        <file path="Lamar.Microsoft.DependencyInjection.dll" orgPath="bin/Lamar.Microsoft.DependencyInjection.dll" />
         <file path="MediatR.dll" orgPath="bin/MediatR.dll" />
         <file path="Scrutor.dll" orgPath="bin/Scrutor.dll" />
         <file path="Microsoft.FeatureManagement.dll" orgPath="bin/Microsoft.FeatureManagement.dll" />
+      <file path="Microsoft.Extensions.DependencyInjection.dll" orgPath="bin/Microsoft.Extensions.DependencyInjection.dll" />
         <folder path="App_Plugins/FeatureManagementDashboard" orgPath="App_Plugins/FeatureManagementDashboard" />
     </files>
     <Actions />
