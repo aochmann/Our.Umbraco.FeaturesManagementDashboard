@@ -7,7 +7,7 @@ using FeaturesManagementDashboard.Application.DTO.Features;
 using FeaturesManagementDashboard.Domain.Entities.Features;
 using FeaturesManagementDashboard.Domain.Repositories;
 using FeaturesManagementDashboard.Infrastructure.Mappers;
-#if NET6_0
+#if NET6_0 || NET7_0
 using Microsoft.Data.SqlClient;
 #endif
 #if NET5_0
@@ -24,7 +24,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Repositories
         private readonly IFeatureItemsMapper _featureItemsMapper;
         private readonly IFeatureItemDtoMapper _featureDtoMapper;
 
-#if NET6_0
+#if NET6_0 || NET7_0
         public UmbracoFeatureRepository(ConnectionStrings connectionStrings,
             IFeatureItemMapper featureItemMapper,
             IFeatureItemsMapper featureItemsMapper,

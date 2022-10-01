@@ -23,7 +23,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Services
             _featuresManagementDashboardSettings = featuresManagementDashboardSettings;
         }
 
-#if NET6_0
+#if NET6_0 || NET7_0
         IEnumerable<Tab<IDashboard>> IDashboardService.GetDashboards(string section, IUser? currentUser)
         {
 #pragma warning disable SA1100 // Do not prefix calls with base unless local implementation exists

@@ -8,7 +8,7 @@ using FeaturesManagementDashboard.Infrastructure.Settings;
 using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Core.DependencyInjection;
 using Umbraco.Cms.Core.Migrations;
-#if  NET6_0
+#if NET6_0 || NET7_0
 using Umbraco.Cms.Infrastructure.Scoping;
 #endif
 #if  NET5_0
@@ -45,16 +45,16 @@ namespace FeaturesManagementDashboard.Infrastructure.Initializers
         private readonly IConfigurationFeatureRepository _configurationFeatureRepository;
         private readonly IUmbracoFeatureRepository _umbracoFeatureRepository;
         private readonly IMigrationPlanExecutor _migrationPlanExecutor;
-#if  NET6_0
+#if NET6_0 || NET7_0
         private readonly Umbraco.Cms.Infrastructure.Scoping.IScopeProvider _scopeProvider;
 #endif
-#if  NET5_0
+#if NET5_0
         private readonly Umbraco.Cms.Core.Scoping.IScopeProvider _scopeProvider;
 #endif
         private readonly IKeyValueService _keyValueService;
         private readonly FeaturesManagementDashboardSettings _featureManagamentDashboardSettings;
 
-#if  NET6_0
+#if NET6_0 || NET7_0
         public FeaturesConfigurationComponent(
             IMigrationPlanExecutor migrationPlanExecutor,
             Umbraco.Cms.Infrastructure.Scoping.IScopeProvider scopeProvider,
@@ -71,7 +71,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Initializers
             _featureManagamentDashboardSettings = featureManagamentDashboardSettings;
         }
 #endif
-#if  NET5_0
+#if NET5_0
         public FeaturesConfigurationComponent(
             IMigrationPlanExecutor migrationPlanExecutor,
             Umbraco.Cms.Core.Scoping.IScopeProvider scopeProvider,
