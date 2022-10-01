@@ -1,11 +1,10 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using Umbraco.Cms.Core.DependencyInjection;
+﻿using Umbraco.Cms.Core.DependencyInjection;
 
 namespace FeaturesManagementDashboard.Extensions
 {
     public static class FeaturesManagementDashboardExtensions
     {
-        public static IUmbracoBuilder AddFeaturesManagementDashboard([NotNull] this IUmbracoBuilder builder)
+        public static IUmbracoBuilder AddFeaturesManagementDashboard(this IUmbracoBuilder builder)
             => new ModuleStartup(builder)
                 .Build();
     }

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 using FeaturesManagementDashboard.Domain.Entities.Features;
@@ -59,7 +58,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Repositories
             }
         }
 
-        private IConfigurationSection GetFeatureSection([NotNull] string featureName)
+        private IConfigurationSection GetFeatureSection(string featureName)
             => _featureManagementSection.GetChildren()
                 .FirstOrDefault(section => section.Key.Equals(featureName));
 

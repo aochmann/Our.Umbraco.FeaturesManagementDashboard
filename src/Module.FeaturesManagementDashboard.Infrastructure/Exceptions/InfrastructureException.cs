@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics.CodeAnalysis;
 
 namespace FeaturesManagementDashboard.Infrastructure.Exceptions
 {
@@ -7,7 +6,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Exceptions
     {
         public virtual string Code { get; } = null!;
 
-        protected InfrastructureException([DisallowNull] string message) : base(message)
+        protected InfrastructureException(string message) : base(message)
         {
         }
     }

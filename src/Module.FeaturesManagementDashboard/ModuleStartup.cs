@@ -2,7 +2,6 @@
 using FeaturesManagementDashboard.Application.Extensions;
 using FeaturesManagementDashboard.Infrastructure;
 using FeaturesManagementDashboard.Infrastructure.Extensions;
-using Lamar;
 using Microsoft.Extensions.DependencyInjection;
 using Umbraco.Cms.Core.DependencyInjection;
 
@@ -17,15 +16,16 @@ namespace FeaturesManagementDashboard
 
         public IUmbracoBuilder Build()
         {
-            var container = new Container(registry =>
-            {
-                registry = registry
-                    .AddApplication()
-                    .AddInfrastructure(_umbracoBuilder);
-            });
+            var serviceCollection = new ServiceCollection();
+
+            serviceCollection
+                .AddApplication()
+                .AddInfrastructure(_umbracoBuilder);
+
+            var serviceProvider = serviceCollection.BuildServiceProvider();
 
             _ = _umbracoBuilder.Services
-                .AddSingleton<ICompositionRoot>(new CompositionRoot(container));
+                .AddSingleton<ICompositionRoot>(new CompositionRoot(serviceProvider));
 
             return _umbracoBuilder;
         }

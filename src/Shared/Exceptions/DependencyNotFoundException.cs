@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Shared.Exceptions
 {
@@ -13,7 +12,7 @@ namespace Shared.Exceptions
         {
         }
 
-        public DependencyNotFoundException([NotNull] Type type) : base(type.ToString())
+        public DependencyNotFoundException(Type type) : base(type.ToString())
         {
         }
 
