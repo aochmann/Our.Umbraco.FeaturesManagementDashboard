@@ -53,15 +53,18 @@ jobs:
         with:
           node-version: '16.13.0'
 
-      - name: Setup .NET 5.0.x
-        uses: actions/setup-dotnet@v1
+      - name: Setup .NET 5.0.x-6.0.x
+        uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '5.0.x'
+          dotnet-version: |
+            5.0.x
+            6.0.x
 
-      - name: Setup .NET 6.0.x
-        uses: actions/setup-dotnet@v1
+      - name: Setup .NET 7.0.x (preview)
+        uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '7.0.x'
+          dotnet-quality: 'preview'
 
       - name: Configure NuGet
         uses: nuget/setup-nuget@v1
