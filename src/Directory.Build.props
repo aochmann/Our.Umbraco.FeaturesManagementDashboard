@@ -86,9 +86,9 @@
     <None Include="$(MSBuildThisFileDirectory).editorconfig" Visible="false" />
   </ItemGroup>
 
-<!--  <ItemGroup Condition="'$(Configuration)' != 'Release'">-->
-<!--    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />-->
-<!--    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="6.0.0" />-->
-<!--    <PackageReference Include="SmartanAlyzers.ExceptionAnalyzer" Version="1.0.10" />-->
-<!--  </ItemGroup>-->
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="6.0.0" PrivateAssets="All" />
+    <PackageReference Include="SmartanAlyzers.ExceptionAnalyzer" Version="1.0.10" PrivateAssets="All" />
+  </ItemGroup>
 </Project>
