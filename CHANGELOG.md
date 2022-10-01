@@ -1,3 +1,7 @@
+## [2.0.1](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/compare/2.0.0...2.0.1) (2022-10-01)
+
+
+
 # [2.0.0](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/compare/1.0.5...2.0.0) (2022-10-01)
 
 
