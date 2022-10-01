@@ -1,17 +1,15 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using FeaturesManagementDashboard.Application.Commands;
-using Lamar;
+﻿using FeaturesManagementDashboard.Application.Commands;
+using Microsoft.Extensions.DependencyInjection;
 using Shared.Commands;
 
 namespace FeaturesManagementDashboard.Application.Extensions
 {
     public static class ApplicationExtensions
     {
-        public static ServiceRegistry AddApplication([NotNull] this ServiceRegistry registry)
+        public static IServiceCollection AddApplication(this IServiceCollection serviceCollection)
         {
-            _ = registry.AddCommands(typeof(ICommandHandler<>));
-
-            return registry;
+            _ = serviceCollection.AddCommands(typeof(ICommandHandler<>));
+            return serviceCollection;
         }
     }
 }

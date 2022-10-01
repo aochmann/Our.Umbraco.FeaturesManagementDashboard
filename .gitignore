@@ -222,3 +222,5 @@ src/.editorconfig
 .vs/ProjectSettings.json
 
 .vs/slnx.sqlite
+
+**/.idea/

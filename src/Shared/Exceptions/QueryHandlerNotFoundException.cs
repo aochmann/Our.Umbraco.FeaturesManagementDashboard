@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Shared.Exceptions
 {
@@ -13,7 +12,7 @@ namespace Shared.Exceptions
         {
         }
 
-        public QueryHandlerNotFoundException([NotNull] Type type) : base(type.ToString())
+        public QueryHandlerNotFoundException(Type type) : base(type.ToString())
         {
         }
 

@@ -33,7 +33,7 @@
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net6.0'">
     <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">

@@ -1,8 +1,6 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using FeaturesManagementDashboard.Application.Commands;
+﻿using FeaturesManagementDashboard.Application.Commands;
 using FeaturesManagementDashboard.Application.Queries;
 using FeaturesManagementDashboard.Infrastructure.HandlerDispatchers;
-using Lamar;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,8 +18,8 @@ namespace FeaturesManagementDashboard.Infrastructure.Extensions
 
     public static class InfrastructureExtensions
     {
-        public static ServiceRegistry AddInfrastructure([NotNull] this ServiceRegistry registry,
-            [NotNull] IUmbracoBuilder umbracoBuilder)
+        public static IServiceCollection AddInfrastructure(this IServiceCollection registry,
+            IUmbracoBuilder umbracoBuilder)
         {
             umbracoBuilder.Services
                 .AddSettings()
@@ -37,45 +35,26 @@ namespace FeaturesManagementDashboard.Infrastructure.Extensions
             return registry.AddInfrastructure(umbracoBuilder.Config);
         }
 
-        internal static ServiceRegistry AddInfrastructure([NotNull] this ServiceRegistry registry, IConfiguration configuration)
+        internal static IServiceCollection AddInfrastructure(this IServiceCollection registry, IConfiguration configuration)
         {
-            _ = registry.For<IConfiguration>()
-                .Use(configuration)
-                .Singleton();
+            _ = registry.AddSingleton<IConfiguration>(configuration);
 
-            _ = registry.For<ConnectionStrings>()
-                .Use(serviceContext => serviceContext.GetService<IConfiguration>()
+            _ = registry.AddSingleton<ConnectionStrings>(serviceContext => serviceContext
+                    .GetService<IConfiguration>()
                     .GetOptions<ConnectionStrings>(
                         "ConnectionStrings",
-                        true))
-                .Singleton();
+                        true));
 
-            _ = registry.For<IDependencyResolver>()
-                .Use<CompositionRoot>()
-                .Singleton();
+            _ = registry.AddSingleton<IDependencyResolver, CompositionRoot>();
 
-            _ = registry.For<IMediator>()
-                .Use<Mediator>()
-                .Scoped();
+            _ = registry.AddScoped<Mediator>();
+            _ = registry.AddScoped<IMediator>(provider => provider.GetRequiredService<Mediator>());
+            _ = registry.AddScoped<ISender>(provider => provider.GetRequiredService<Mediator>());
+            _ = registry.AddScoped<IPublisher>(provider => provider.GetRequiredService<Mediator>());
+            _ = registry.AddScoped<ServiceFactory>(provider => provider.GetRequiredService);
 
-            _ = registry.For<ISender>()
-                .Use<Mediator>()
-                .Scoped();
-
-            _ = registry.For<IPublisher>()
-                .Use<Mediator>()
-                .Scoped();
-
-            _ = registry.For<ServiceFactory>()
-                .Use(ctx => ctx.GetInstance);
-
-            _ = registry.For<ICommandDispatcher>()
-                .Use<CommandDispatcher>()
-                .Scoped();
-
-            _ = registry.For<IQueryDispatcher>()
-                .Use<QueryDispatcher>()
-                .Scoped();
+            _ = registry.AddScoped<ICommandDispatcher, CommandDispatcher>();
+            _ = registry.AddScoped<IQueryDispatcher, QueryDispatcher>();
 
             _ = registry
                 .AddSettings()
