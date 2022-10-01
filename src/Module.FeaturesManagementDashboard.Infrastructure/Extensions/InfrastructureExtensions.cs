@@ -1,7 +1,6 @@
 ﻿using FeaturesManagementDashboard.Application.Commands;
 using FeaturesManagementDashboard.Application.Queries;
 using FeaturesManagementDashboard.Infrastructure.HandlerDispatchers;
-using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.FeatureManagement;
@@ -11,6 +10,7 @@ using Shared.Queries;
 using SharedAbstractions.DI;
 using Umbraco.Cms.Core.Configuration.Models;
 using Umbraco.Cms.Core.DependencyInjection;
+using InMemoryQueryDispatcher = FeaturesManagementDashboard.Infrastructure.HandlerDispatchers.InMemoryQueryDispatcher;
 
 namespace FeaturesManagementDashboard.Infrastructure.Extensions
 {
@@ -46,15 +46,8 @@ namespace FeaturesManagementDashboard.Infrastructure.Extensions
                         true));
 
             _ = registry.AddSingleton<IDependencyResolver, CompositionRoot>();
-
-            _ = registry.AddScoped<Mediator>();
-            _ = registry.AddScoped<IMediator>(provider => provider.GetRequiredService<Mediator>());
-            _ = registry.AddScoped<ISender>(provider => provider.GetRequiredService<Mediator>());
-            _ = registry.AddScoped<IPublisher>(provider => provider.GetRequiredService<Mediator>());
-            _ = registry.AddScoped<ServiceFactory>(provider => provider.GetRequiredService);
-
-            _ = registry.AddScoped<ICommandDispatcher, CommandDispatcher>();
-            _ = registry.AddScoped<IQueryDispatcher, QueryDispatcher>();
+            _ = registry.AddScoped<ICommandDispatcher, InMemoryCommandDispatcher>();
+            _ = registry.AddScoped<IQueryDispatcher, InMemoryQueryDispatcher>();
 
             _ = registry
                 .AddSettings()

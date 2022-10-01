@@ -13,7 +13,7 @@ namespace FeaturesManagementDashboard.Application.Commands.Handlers
         public UpdateFeatureHandler(IUmbracoFeatureRepository featureRepository)
             => _featureRepository = featureRepository;
 
-        public async Task Handle(UpdateFeature command, CancellationToken cancellationToken)
+        public async ValueTask HandleAsync(UpdateFeature command)
         {
             var feature = await _featureRepository.GetAsync(command.FeatureId.ToFeatureId());
 
