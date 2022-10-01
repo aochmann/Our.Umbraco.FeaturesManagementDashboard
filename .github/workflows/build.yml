@@ -78,8 +78,8 @@ jobs:
         run: |
           dotnet build \
             -c ${{ env.CONFIG }} \
-            -f net6.0
-            -v detailed
+            -f net6.0 \
+            -v detailed \
             --no-restore
 
       - name: Publish
