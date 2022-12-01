@@ -1,3 +1,13 @@
+# [3.1.0](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/compare/3.0.0...3.1.0) (2022-12-01)
+
+
+### Features
+
+* added default user and db for Umbraco ([482b7c4](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/commit/482b7c48024d85a4e7015d3ea258ecf1f8587062))
+* upgraded packages to net7 and Umbraco 11 ([931769f](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/commit/931769ffd7072823a859d2424ed89ce3e156ce6c))
+
+
+
 # [3.0.0](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/compare/2.0.3...3.0.0) (2022-10-01)
 
 
