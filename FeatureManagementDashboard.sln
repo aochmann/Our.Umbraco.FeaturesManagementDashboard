@@ -40,7 +40,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeaturesManagementDashboard
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeaturesManagementDashboard.Domain", "src\Module.FeaturesManagementDashboard.Domain\FeaturesManagementDashboard.Domain.csproj", "{3D0323E0-F6B6-44D5-93C7-28F7C003FC52}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeatureManagement.ExampleWeb", "src\FeatureManagement.ExampleWeb\FeatureManagement.ExampleWeb.csproj", "{074FF0D5-AC9D-4459-8BD1-6231C45C6850}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureManagement.ExampleWeb", "src\FeatureManagement.ExampleWeb\FeatureManagement.ExampleWeb.csproj", "{D79496FA-B21F-46A2-B40B-EF0C262BBC8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,10 +72,10 @@ Global
 		{3D0323E0-F6B6-44D5-93C7-28F7C003FC52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D0323E0-F6B6-44D5-93C7-28F7C003FC52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D0323E0-F6B6-44D5-93C7-28F7C003FC52}.Release|Any CPU.Build.0 = Release|Any CPU
-		{074FF0D5-AC9D-4459-8BD1-6231C45C6850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{074FF0D5-AC9D-4459-8BD1-6231C45C6850}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{074FF0D5-AC9D-4459-8BD1-6231C45C6850}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{074FF0D5-AC9D-4459-8BD1-6231C45C6850}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D79496FA-B21F-46A2-B40B-EF0C262BBC8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D79496FA-B21F-46A2-B40B-EF0C262BBC8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D79496FA-B21F-46A2-B40B-EF0C262BBC8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D79496FA-B21F-46A2-B40B-EF0C262BBC8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

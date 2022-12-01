@@ -1,7 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
-    <IsPackable>false</IsPackable>
-    <IsPublishable>false</IsPublishable>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>FeatureManagement.ExampleWeb</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -12,36 +12,38 @@
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
-    <PackageReference Include="Microsoft.FeatureManagement.AspNetCore" Version="2.4.0" />
-    <PackageReference Include="Umbraco.Cms" Version="10.2.1" />
+    <PackageReference Include="Umbraco.Cms" Version="11.0.0" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
-    <PackageReference Include="Microsoft.FeatureManagement.AspNetCore" Version="2.4.0" />
     <PackageReference Include="Umbraco.Cms" Version="10.2.1" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
-    <PackageReference Include="Microsoft.FeatureManagement.AspNetCore" Version="2.4.0" />
     <PackageReference Include="Umbraco.Cms" Version="9.5.4" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.FeatureManagement" Version="2.5.1" />
+    <PackageReference Include="Microsoft.FeatureManagement.AspNetCore" Version="2.5.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <!-- Opt-in to app-local ICU to ensure consistent globalization APIs across different platforms -->
     <PackageReference Include="Microsoft.ICU.ICU4C.Runtime" Version="68.2.0.9" />
+    <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="68.2.0.9" Condition="$(RuntimeIdentifier.StartsWith('linux')) or $(RuntimeIdentifier.StartsWith('win')) or ('$(RuntimeIdentifier)' == '' and !$([MSBuild]::IsOSPlatform('osx')))" />
+  </ItemGroup>
+  
+  <ItemGroup>
     <ProjectReference Include="..\Module.FeaturesManagementDashboard.Application\FeaturesManagementDashboard.Application.csproj" />
     <ProjectReference Include="..\Module.FeaturesManagementDashboard.Domain\FeaturesManagementDashboard.Domain.csproj" />
     <ProjectReference Include="..\Module.FeaturesManagementDashboard.Infrastructure\FeaturesManagementDashboard.Infrastructure.csproj" />
     <ProjectReference Include="..\Module.FeaturesManagementDashboard\FeaturesManagementDashboard.csproj" />
     <ProjectReference Include="..\SharedAbstractions\SharedAbstractions.csproj" />
     <ProjectReference Include="..\Shared\Shared.csproj" />
-    <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="68.2" />
   </ItemGroup>
-
-  <PropertyGroup>
-    <DefaultItemExcludes>$(DefaultItemExcludes);App_Plugins/**;</DefaultItemExcludes>
-    <DefaultItemExcludes>$(DefaultItemExcludes);umbraco/**;</DefaultItemExcludes>
-    <DefaultItemExcludes>$(DefaultItemExcludes);wwwroot/media/**;</DefaultItemExcludes>
-  </PropertyGroup>
+  
+  <Import Project="..\Module.FeaturesManagementDashboard\build\Our.Umbraco.FeaturesManagementDashboard.targets" />
 
   <ItemGroup>
     <Content Include="App_Plugins/**" CopyToOutputDirectory="Always" />
@@ -53,17 +55,15 @@
     <Compile Include="umbraco/models/**" Exclude="**/*.flag" />
   </ItemGroup>
 
-  <Import Project="..\Module.FeaturesManagementDashboard\build\Our.Umbraco.FeaturesManagementDashboard.targets" />
-
-
   <PropertyGroup>
+    <!-- Razor files are needed for the backoffice to work correctly -->
     <CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
   </PropertyGroup>
 
-  <!-- Set this to true if ModelsBuilder mode is not InMemoryAuto-->
   <PropertyGroup>
+    <!-- Remove RazorCompileOnBuild and RazorCompileOnPublish when not using ModelsMode InMemoryAuto -->
     <RazorCompileOnBuild>false</RazorCompileOnBuild>
     <RazorCompileOnPublish>false</RazorCompileOnPublish>
   </PropertyGroup>
-
+  
 </Project>
