@@ -53,18 +53,13 @@ jobs:
         with:
           node-version: '16.13.0'
 
-      - name: Setup .NET 5.0.x-6.0.x
+      - name: Setup .NET 5/6/7
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
             5.0.x
             6.0.x
-
-      - name: Setup .NET 7.0.x (preview)
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: '7.0.x'
-          dotnet-quality: 'preview'
+            7.0.x
 
       - name: Configure NuGet
         uses: nuget/setup-nuget@v1
@@ -78,7 +73,7 @@ jobs:
         run: |
           dotnet build \
             -c ${{ env.CONFIG }} \
-            -f net6.0 \
+            -f net7.0 \
             --no-restore
 
       - name: Publish
@@ -87,7 +82,7 @@ jobs:
           dotnet publish \
             -o ${{ env.BINARIES_OUTPUT }} \
             -c ${{ env.CONFIG }} \
-            -f net6.0 \
+            -f net7.0 \
             --no-build \
             --no-restore
 
@@ -95,12 +90,14 @@ jobs:
         if: ${{ github.event_name != 'pull_request' }}
         run: |
           dotnet pack \
-            -c Release \
+            -c ${{ env.CONFIG }} \
             --include-symbols \
             --no-restore \
+            --no-build \
             -o ${{ env.NUGET_OUTPUT }} \
             /p:Version=${{ env.VERSION }} \
-            /p:AssemblyVersion=${{ env.VERSION }}
+            /p:AssemblyVersion=${{ env.VERSION }} \
+            /p:OutputPath=${{ env.BINARIES_OUTPUT }}
 
       - name: Upload NuGet artifact
         if: ${{ github.event_name != 'pull_request' }}

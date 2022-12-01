@@ -50,13 +50,14 @@ jobs:
           name: build_${{ env.PROJECT_NAME }}.${{ env.VERSION }}
           path: ${{ env.BINARIES_OUTPUT }}
 
-      - name: Setup .NET 5.0.x-6.0.x
+      - name: Setup .NET 5/6/7
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
             3.1.x
             5.0.x
             6.0.x
+            7.0.x
 
       - name: Install tools
         run: dotnet tool restore
