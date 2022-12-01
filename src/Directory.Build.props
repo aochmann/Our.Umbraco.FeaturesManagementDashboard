@@ -14,7 +14,7 @@
   <!-- Project Setup -->
 
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <TargetFrameworks>net6.0;net5.0</TargetFrameworks>
+    <TargetFrameworks>net7.0;net6.0;net5.0</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' != 'Release'">
@@ -41,11 +41,6 @@
   <PropertyGroup Condition="'$(TargetFramework)' == 'net7.0'">
     <Nullable>enable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
-    <IsPackable>false</IsPackable>
-    <IsPublishable>false</IsPublishable>
-    <PackRelease>false</PackRelease>
-    <PublishRelease>false</PublishRelease>
-    <EnablePreviewFeatures>false</EnablePreviewFeatures>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net6.0'">

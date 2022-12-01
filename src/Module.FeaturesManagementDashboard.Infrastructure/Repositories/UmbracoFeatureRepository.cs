@@ -74,6 +74,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Repositories
             }
             catch (Exception)
             {
+                // ignored
             }
 
             return Enumerable.Empty<Feature>();
@@ -96,6 +97,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Repositories
             }
             catch (Exception)
             {
+                // ignored
             }
 
             return null;
@@ -122,6 +124,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Repositories
             }
             catch (Exception)
             {
+                // ignored
             }
         }
     }
