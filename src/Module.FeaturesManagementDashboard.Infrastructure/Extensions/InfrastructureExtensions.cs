@@ -32,18 +32,38 @@ namespace FeaturesManagementDashboard.Infrastructure.Extensions
 
             _ = umbracoBuilder.AddDashboard();
 
-            return registry.AddInfrastructure(umbracoBuilder.Config);
-        }
+            _ = registry.AddSingleton<IConfiguration>(umbracoBuilder.Config);
+            _ = registry.AddSingleton<ConnectionStrings>(serviceContext =>
+            {
+                var configuration = serviceContext.GetRequiredService<IConfiguration>();
+                var connectionStrings = new ConnectionStrings();
 
-        internal static IServiceCollection AddInfrastructure(this IServiceCollection registry, IConfiguration configuration)
-        {
-            _ = registry.AddSingleton<IConfiguration>(configuration);
+                var connectionStringSection = configuration.GetSection("ConnectionStrings");
+                if (connectionStringSection is null)
+                {
+                    return connectionStrings;
+                }
 
-            _ = registry.AddSingleton<ConnectionStrings>(serviceContext => serviceContext
-                    .GetService<IConfiguration>()
-                    .GetOptions<ConnectionStrings>(
-                        "ConnectionStrings",
-                        true));
+                var umbracoDbDsn = connectionStringSection.GetValue<string>("umbracoDbDSN");
+                var providerName = connectionStringSection.GetValue<string>("umbracoDbDSN_ProviderName");
+                if (umbracoDbDsn is null)
+                {
+                    return connectionStrings;
+                }
+
+#if NET6_0 || NET7_0
+                connectionStrings.ConnectionString =
+                    Umbraco.Extensions.ConfigurationExtensions.GetUmbracoConnectionString(configuration);
+                connectionStrings.ProviderName = providerName;
+#endif
+#if NET5_0
+                connectionStrings.UmbracoConnectionString = new Umbraco.Cms.Core.Configuration.ConfigConnectionString(
+                    Umbraco.Cms.Core.Constants.System.UmbracoConnectionName,
+                    umbracoDbDsn);
+#endif
+
+                return connectionStrings;
+            });
 
             _ = registry.AddSingleton<IDependencyResolver, CompositionRoot>();
             _ = registry.AddScoped<ICommandDispatcher, InMemoryCommandDispatcher>();

@@ -66,7 +66,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Repositories
         {
             var subConfigurations = featureSection.GetChildren();
 
-            if (subConfigurations is null || !subConfigurations.Any())
+            if (!subConfigurations?.Any() ?? false)
             {
                 var featureName = featureSection.Key;
                 var featureStatus = featureSection.Get<bool>();

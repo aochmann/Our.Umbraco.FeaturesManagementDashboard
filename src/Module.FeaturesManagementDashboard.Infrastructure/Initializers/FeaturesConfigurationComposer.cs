@@ -52,14 +52,14 @@ namespace FeaturesManagementDashboard.Infrastructure.Initializers
         private readonly Umbraco.Cms.Core.Scoping.IScopeProvider _scopeProvider;
 #endif
         private readonly IKeyValueService _keyValueService;
-        private readonly FeaturesManagementDashboardSettings _featureManagamentDashboardSettings;
+        private readonly FeaturesManagementDashboardSettings _featureManagementDashboardSettings;
 
 #if NET6_0 || NET7_0
         public FeaturesConfigurationComponent(
             IMigrationPlanExecutor migrationPlanExecutor,
             Umbraco.Cms.Infrastructure.Scoping.IScopeProvider scopeProvider,
             IKeyValueService keyValueService,
-            FeaturesManagementDashboardSettings featureManagamentDashboardSettings,
+            FeaturesManagementDashboardSettings featureManagementDashboardSettings,
             ICompositionRoot compositionRoot)
         {
             _configurationFeatureRepository = compositionRoot.Resolve<IConfigurationFeatureRepository>();
@@ -68,7 +68,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Initializers
             _migrationPlanExecutor = migrationPlanExecutor;
             _scopeProvider = scopeProvider;
             _keyValueService = keyValueService;
-            _featureManagamentDashboardSettings = featureManagamentDashboardSettings;
+            _featureManagementDashboardSettings = featureManagementDashboardSettings;
         }
 #endif
 #if NET5_0
@@ -76,7 +76,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Initializers
             IMigrationPlanExecutor migrationPlanExecutor,
             Umbraco.Cms.Core.Scoping.IScopeProvider scopeProvider,
             IKeyValueService keyValueService,
-            FeaturesManagementDashboardSettings featureManagamentDashboardSettings,
+            FeaturesManagementDashboardSettings featureManagementDashboardSettings,
             ICompositionRoot compositionRoot)
         {
             _configurationFeatureRepository = compositionRoot.Resolve<IConfigurationFeatureRepository>();
@@ -85,7 +85,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Initializers
             _migrationPlanExecutor = migrationPlanExecutor;
             _scopeProvider = scopeProvider;
             _keyValueService = keyValueService;
-            _featureManagamentDashboardSettings = featureManagamentDashboardSettings;
+            _featureManagementDashboardSettings = featureManagementDashboardSettings;
         }
 #endif
 
@@ -106,7 +106,7 @@ namespace FeaturesManagementDashboard.Infrastructure.Initializers
             var umbracoFeatures = _umbracoFeatureRepository.GetAllAsync()
                 .GetAwaiter().GetResult();
 
-            var featuresToAdd = (_featureManagamentDashboardSettings.Override is not true
+            var featuresToAdd = (_featureManagementDashboardSettings.Override is not true
                 ? configurationFeatures.Except(
                     umbracoFeatures,
                     new FeatureComparer())
