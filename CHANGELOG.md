@@ -1,3 +1,12 @@
+# [3.2.0](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/compare/3.1.0...3.2.0) (2023-02-04)
+
+
+### Bug Fixes
+
+* fixed Umbraco database connection for different versions ([4a1c9d1](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/commit/4a1c9d110de59bfb1c14e692fba2d0c16a9120cd))
+
+
+
 # [3.1.0](https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/compare/3.0.0...3.1.0) (2022-12-01)
 
 
