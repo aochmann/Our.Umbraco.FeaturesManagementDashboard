@@ -1,12 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <IsPackable>false</IsPackable>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <Nullable>disable</Nullable>
-  </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\SharedAbstractions\SharedAbstractions.csproj" />
   </ItemGroup>

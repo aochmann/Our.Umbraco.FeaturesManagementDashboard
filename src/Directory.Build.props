@@ -12,13 +12,12 @@
   </PropertyGroup>
 
   <!-- Project Setup -->
-
-  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+  <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)' != 'Release'">
-    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <IsPublishable>false</IsPublishable>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <PropertyGroup>
