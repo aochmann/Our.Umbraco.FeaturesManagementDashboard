@@ -60,18 +60,8 @@
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
   </ItemGroup>
 
-  <!-- Rules -->
   <ItemGroup>
-    <AdditionalFiles Include="$(MSBuildThisFileDirectory)linting\stylecop.json" />
-  </ItemGroup>
-
-  <PropertyGroup>
-    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)linting\codeanalysis.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="6.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="7.0.0" PrivateAssets="All" />
     <PackageReference Include="SmartanAlyzers.ExceptionAnalyzer" Version="1.0.10" PrivateAssets="All" />
   </ItemGroup>
 </Project>
