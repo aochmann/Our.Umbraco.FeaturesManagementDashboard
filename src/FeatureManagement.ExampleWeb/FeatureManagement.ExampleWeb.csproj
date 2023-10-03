@@ -4,22 +4,13 @@
     <RootNamespace>FeatureManagement.ExampleWeb</RootNamespace>
     <IsPackable>false</IsPackable>
     <IsPublishable>false</IsPublishable>
-    <TargetFrameworks>net7.0;net6.0;net5.0</TargetFrameworks>
     <Nullable>disable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
+  <ItemGroup>
     <PackageReference Include="Umbraco.Cms" Version="11.0.0" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
-    <PackageReference Include="Umbraco.Cms" Version="10.2.1" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
-    <PackageReference Include="Umbraco.Cms" Version="9.5.4" />
   </ItemGroup>
 
   <ItemGroup>
