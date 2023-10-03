@@ -51,17 +51,9 @@ namespace FeaturesManagementDashboard.Infrastructure.Extensions
                     return connectionStrings;
                 }
 
-#if NET6_0 || NET7_0
                 connectionStrings.ConnectionString =
                     Umbraco.Extensions.ConfigurationExtensions.GetUmbracoConnectionString(configuration);
                 connectionStrings.ProviderName = providerName;
-#endif
-#if NET5_0
-                connectionStrings.UmbracoConnectionString = new Umbraco.Cms.Core.Configuration.ConfigConnectionString(
-                    Umbraco.Cms.Core.Constants.System.UmbracoConnectionName,
-                    umbracoDbDsn);
-#endif
-
                 return connectionStrings;
             });
 

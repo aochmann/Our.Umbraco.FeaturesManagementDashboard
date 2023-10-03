@@ -8,12 +8,7 @@ using FeaturesManagementDashboard.Infrastructure.Settings;
 using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Core.DependencyInjection;
 using Umbraco.Cms.Core.Migrations;
-#if NET6_0 || NET7_0
 using Umbraco.Cms.Infrastructure.Scoping;
-#endif
-#if  NET5_0
-using Umbraco.Cms.Core.Scoping;
-#endif
 using Umbraco.Cms.Core.Services;
 using Umbraco.Cms.Infrastructure.Migrations;
 using Umbraco.Cms.Infrastructure.Migrations.Upgrade;
@@ -45,16 +40,10 @@ namespace FeaturesManagementDashboard.Infrastructure.Initializers
         private readonly IConfigurationFeatureRepository _configurationFeatureRepository;
         private readonly IUmbracoFeatureRepository _umbracoFeatureRepository;
         private readonly IMigrationPlanExecutor _migrationPlanExecutor;
-#if NET6_0 || NET7_0
         private readonly Umbraco.Cms.Infrastructure.Scoping.IScopeProvider _scopeProvider;
-#endif
-#if NET5_0
-        private readonly Umbraco.Cms.Core.Scoping.IScopeProvider _scopeProvider;
-#endif
         private readonly IKeyValueService _keyValueService;
         private readonly FeaturesManagementDashboardSettings _featureManagementDashboardSettings;
 
-#if NET6_0 || NET7_0
         public FeaturesConfigurationComponent(
             IMigrationPlanExecutor migrationPlanExecutor,
             Umbraco.Cms.Infrastructure.Scoping.IScopeProvider scopeProvider,
@@ -70,24 +59,6 @@ namespace FeaturesManagementDashboard.Infrastructure.Initializers
             _keyValueService = keyValueService;
             _featureManagementDashboardSettings = featureManagementDashboardSettings;
         }
-#endif
-#if NET5_0
-        public FeaturesConfigurationComponent(
-            IMigrationPlanExecutor migrationPlanExecutor,
-            Umbraco.Cms.Core.Scoping.IScopeProvider scopeProvider,
-            IKeyValueService keyValueService,
-            FeaturesManagementDashboardSettings featureManagementDashboardSettings,
-            ICompositionRoot compositionRoot)
-        {
-            _configurationFeatureRepository = compositionRoot.Resolve<IConfigurationFeatureRepository>();
-            _umbracoFeatureRepository = compositionRoot.Resolve<IUmbracoFeatureRepository>();
-
-            _migrationPlanExecutor = migrationPlanExecutor;
-            _scopeProvider = scopeProvider;
-            _keyValueService = keyValueService;
-            _featureManagementDashboardSettings = featureManagementDashboardSettings;
-        }
-#endif
 
         public void Initialize()
         {

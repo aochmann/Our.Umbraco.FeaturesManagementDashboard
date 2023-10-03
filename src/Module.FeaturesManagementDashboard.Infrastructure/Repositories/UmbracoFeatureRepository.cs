@@ -20,7 +20,6 @@ namespace FeaturesManagementDashboard.Infrastructure.Repositories
         private readonly IFeatureItemsMapper _featureItemsMapper;
         private readonly IFeatureItemDtoMapper _featureDtoMapper;
 
-#if NET6_0 || NET7_0
         public UmbracoFeatureRepository(ConnectionStrings connectionStrings,
             IFeatureItemMapper featureItemMapper,
             IFeatureItemsMapper featureItemsMapper,
@@ -32,20 +31,6 @@ namespace FeaturesManagementDashboard.Infrastructure.Repositories
             _featureItemsMapper = featureItemsMapper;
             _featureDtoMapper = featureDtoMapper;
         }
-#endif
-#if NET5_0
-        public UmbracoFeatureRepository(ConnectionStrings connectionStrings,
-            IFeatureItemMapper featureItemMapper,
-            IFeatureItemsMapper featureItemsMapper,
-            IFeatureItemDtoMapper featureDtoMapper)
-        {
-            _umbracoConnectionString = connectionStrings.UmbracoConnectionString.ConnectionString;
-            _providerName = connectionStrings.UmbracoConnectionString.ProviderName;
-            _featureItemMapper = featureItemMapper;
-            _featureItemsMapper = featureItemsMapper;
-            _featureDtoMapper = featureDtoMapper;
-        }
-#endif
 
         public async ValueTask<bool> ExistsAsync(FeatureId featureId)
         {
