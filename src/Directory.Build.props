@@ -60,6 +60,14 @@
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
   </ItemGroup>
 
+  <!-- Analyzers Configuration -->
+  <PropertyGroup>
+    <AnalysisMode>Recommended</AnalysisMode>
+    <AnalysisLevel>7-recommended</AnalysisLevel>
+    <AnalysisLevelStyle>7-recommended</AnalysisLevelStyle>
+    <AnalysisModeSecurity>All</AnalysisModeSecurity>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="7.0.0" PrivateAssets="All" />
     <PackageReference Include="SmartanAlyzers.ExceptionAnalyzer" Version="1.0.10" PrivateAssets="All" />
