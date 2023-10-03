@@ -4,8 +4,8 @@
     <ContentTargetFolders>.</ContentTargetFolders>
     <PackageId>Our.Umbraco.FeaturesManagementDashboard</PackageId>
     <Title>Our.Umbraco.FeaturesManagementDashboard</Title>
-    <Description>Feature Management dashboard for Umbraco 9/10/11. This package adds feature management dashboard into **Umbraco** backoffice. It use as feature management the Microsoft Feature Flags engine</Description>
-    <Product>Feature Management dashboard for Umbraco 9/10/11</Product>
+    <Description>Feature Management dashboard for Umbraco 12. This package adds feature management dashboard into **Umbraco** backoffice. It use as feature management the Microsoft Feature Flags engine</Description>
+    <Product>Feature Management dashboard for Umbraco 12</Product>
     <PackageTags>umbraco plugin package feature management toggle</PackageTags>
     <Version></Version>
     <Authors>Adrian Ochmann, Marcin Zajkowski</Authors>
@@ -35,9 +35,9 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
-    <PackageReference Include="Umbraco.Cms.Core" Version="11.0.0" />
-    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="11.0.0" />
-    <PackageReference Include="Umbraco.Cms.Infrastructure" Version="11.0.0" />
+    <PackageReference Include="Umbraco.Cms.Core" Version="12.0.0" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="12.0.0" />
+    <PackageReference Include="Umbraco.Cms.Infrastructure" Version="12.0.0" />
   </ItemGroup>
 
   <ItemGroup>
