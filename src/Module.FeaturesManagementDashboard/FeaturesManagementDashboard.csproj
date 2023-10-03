@@ -1,11 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <ContentTargetFolders>.</ContentTargetFolders>
     <PackageId>Our.Umbraco.FeaturesManagementDashboard</PackageId>
     <Title>Our.Umbraco.FeaturesManagementDashboard</Title>
-    <Description>Feature Management dashboard for Umbraco 9/10/11. This package adds feature management dashboard into **Umbraco** backoffice. It use as feature management the Microsoft Feature Flags engine</Description>
-    <Product>Feature Management dashboard for Umbraco 9/10/11</Product>
+    <Description>Feature Management dashboard for Umbraco 12. This package adds feature management dashboard into **Umbraco** backoffice. It use as feature management the Microsoft Feature Flags engine</Description>
+    <Product>Feature Management dashboard for Umbraco 12</Product>
     <PackageTags>umbraco plugin package feature management toggle</PackageTags>
     <Version></Version>
     <Authors>Adrian Ochmann, Marcin Zajkowski</Authors>
