@@ -1,9 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using FeaturesManagementDashboard.Application.Queries;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace FeaturesManagementDashboard.Infrastructure.HandlerDispatchers
+﻿namespace FeaturesManagementDashboard.Infrastructure.HandlerDispatchers
 {
     internal class InMemoryQueryDispatcher : IQueryDispatcher
     {

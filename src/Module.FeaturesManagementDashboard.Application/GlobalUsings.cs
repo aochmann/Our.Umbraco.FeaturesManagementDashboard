@@ -1,0 +1,10 @@
+﻿global using System.Threading.Tasks;
+global using FeaturesManagementDashboard.Domain.Entities.Features;
+global using FeaturesManagementDashboard.Domain.Exceptions;
+global using FeaturesManagementDashboard.Domain.Repositories;
+global using SharedAbstractions.DI;
+global using FeaturesManagementDashboard.Application.Commands;
+global using Microsoft.Extensions.DependencyInjection;
+global using Shared.Commands;
+global using FeaturesManagementDashboard.Application.DTO.Features;
+global using System.Collections.Generic;

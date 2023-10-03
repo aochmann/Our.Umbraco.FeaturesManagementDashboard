@@ -1,5 +1,4 @@
-﻿using Umbraco.Cms.Core.DependencyInjection;
-
+﻿
 namespace FeaturesManagementDashboard.Extensions
 {
     public static class FeaturesManagementDashboardExtensions

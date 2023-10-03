@@ -1,10 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using Shared.Exceptions;
-using SharedAbstractions.Commands;
-using SharedAbstractions.DI;
-
-namespace Shared.Commands
+﻿namespace Shared.Commands
 {
     public class InMemoryCommandDispatcher : ICommandDispatcher
     {

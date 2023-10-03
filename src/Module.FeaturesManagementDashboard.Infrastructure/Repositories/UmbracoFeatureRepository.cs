@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using DapperExtensions;
-using FeaturesManagementDashboard.Application.DTO.Features;
-using FeaturesManagementDashboard.Domain.Entities.Features;
-using FeaturesManagementDashboard.Domain.Repositories;
-using FeaturesManagementDashboard.Infrastructure.Mappers;
-using Umbraco.Cms.Core.Configuration.Models;
-
-namespace FeaturesManagementDashboard.Infrastructure.Repositories
+﻿namespace FeaturesManagementDashboard.Infrastructure.Repositories
 {
     internal class UmbracoFeatureRepository : IUmbracoFeatureRepository
     {

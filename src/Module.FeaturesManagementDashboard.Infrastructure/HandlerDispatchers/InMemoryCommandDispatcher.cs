@@ -1,10 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using FeaturesManagementDashboard.Application.Commands;
-using Microsoft.Extensions.DependencyInjection;
-using Umbraco.Cms.Core.Services;
-
-namespace FeaturesManagementDashboard.Infrastructure.HandlerDispatchers
+﻿namespace FeaturesManagementDashboard.Infrastructure.HandlerDispatchers
 {
     internal class InMemoryCommandDispatcher : ICommandDispatcher
     {

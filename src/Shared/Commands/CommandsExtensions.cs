@@ -1,9 +1,4 @@
-﻿using System;
-using System.Reflection;
-using Microsoft.Extensions.DependencyInjection;
-using SharedAbstractions.Commands;
-
-namespace Shared.Commands
+﻿namespace Shared.Commands
 {
     public static class CommandsExtensions
     {

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using FeaturesManagementDashboard.Application.DI;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace FeaturesManagementDashboard.Infrastructure
+﻿namespace FeaturesManagementDashboard.Infrastructure
 {
     internal class CompositionRoot : ICompositionRoot
     {

@@ -1,8 +1,4 @@
-﻿using System;
-using Umbraco.Cms.Core.Composing;
-using Umbraco.Cms.Core.Dashboards;
-
-namespace FeaturesManagementDashboard.Infrastructure.Dashboards
+﻿namespace FeaturesManagementDashboard.Infrastructure.Dashboards
 {
     [Weight(80)]
     public class FeatureManagementDashboard : IDashboard

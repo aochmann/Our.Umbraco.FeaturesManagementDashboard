@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using FeaturesManagementDashboard.Domain.Entities.Features;
-
-namespace FeaturesManagementDashboard.Infrastructure.Comparers
+﻿namespace FeaturesManagementDashboard.Infrastructure.Comparers
 {
 #pragma warning disable CS8767 // Nullability of reference types in type of parameter doesn't match implicitly implemented member (possibly because of nullability attributes).
 

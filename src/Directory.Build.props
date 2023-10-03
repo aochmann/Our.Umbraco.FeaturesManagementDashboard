@@ -72,4 +72,11 @@
     <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="7.0.0" PrivateAssets="All" />
     <PackageReference Include="SmartanAlyzers.ExceptionAnalyzer" Version="1.0.10" PrivateAssets="All" />
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MoveToGlobalUsingsAnalyzer" Version="1.4.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
 </Project>

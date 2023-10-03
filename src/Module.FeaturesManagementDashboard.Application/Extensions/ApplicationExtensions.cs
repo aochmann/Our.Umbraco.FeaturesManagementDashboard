@@ -1,8 +1,4 @@
-﻿using FeaturesManagementDashboard.Application.Commands;
-using Microsoft.Extensions.DependencyInjection;
-using Shared.Commands;
-
-namespace FeaturesManagementDashboard.Application.Extensions
+﻿namespace FeaturesManagementDashboard.Application.Extensions
 {
     public static class ApplicationExtensions
     {

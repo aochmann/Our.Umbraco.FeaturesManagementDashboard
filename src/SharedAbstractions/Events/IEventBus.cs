@@ -1,7 +1,4 @@
-﻿using System.Threading.Tasks;
-using SharedAbstractions.Domain;
-
-namespace SharedAbstractions.Events
+﻿namespace SharedAbstractions.Events
 {
     public interface IEventBus
     {

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Shared.Exceptions
+﻿namespace Shared.Exceptions
 {
     public class DependencyNotFoundException : Exception
     {

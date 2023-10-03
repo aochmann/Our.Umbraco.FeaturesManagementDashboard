@@ -1,11 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using FeaturesManagementDashboard.Domain.Entities.Features;
-using FeaturesManagementDashboard.Domain.Repositories;
-using Microsoft.Extensions.Configuration;
-
-namespace FeaturesManagementDashboard.Infrastructure.Repositories
+﻿namespace FeaturesManagementDashboard.Infrastructure.Repositories
 {
     internal class ConfigurationRepository : IConfigurationFeatureRepository
     {

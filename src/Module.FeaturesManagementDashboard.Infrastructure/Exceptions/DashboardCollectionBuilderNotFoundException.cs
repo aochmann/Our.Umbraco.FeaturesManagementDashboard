@@ -1,6 +1,4 @@
-﻿using Umbraco.Cms.Core.Dashboards;
-
-namespace FeaturesManagementDashboard.Infrastructure.Exceptions
+﻿namespace FeaturesManagementDashboard.Infrastructure.Exceptions
 {
     public class DashboardCollectionBuilderNotFoundException : InfrastructureException
     {

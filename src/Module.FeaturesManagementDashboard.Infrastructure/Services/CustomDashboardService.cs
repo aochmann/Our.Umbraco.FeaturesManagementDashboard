@@ -1,13 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using FeaturesManagementDashboard.Infrastructure.Dashboards;
-using FeaturesManagementDashboard.Infrastructure.Settings;
-using Umbraco.Cms.Core.Dashboards;
-using Umbraco.Cms.Core.Models.ContentEditing;
-using Umbraco.Cms.Core.Models.Membership;
-using Umbraco.Cms.Core.Services;
-
-namespace FeaturesManagementDashboard.Infrastructure.Services
+﻿namespace FeaturesManagementDashboard.Infrastructure.Services
 {
     public class CustomDashboardService : DashboardService, IDashboardService
     {

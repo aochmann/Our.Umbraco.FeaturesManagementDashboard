@@ -1,10 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using Shared.Exceptions;
-using SharedAbstractions.DI;
-using SharedAbstractions.Queries;
-
-namespace Shared.Queries
+﻿namespace Shared.Queries
 {
     public class InMemoryQueryDispatcher : IQueryDispatcher
     {

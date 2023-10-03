@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using FeaturesManagementDashboard.Application.DI;
-using FeaturesManagementDashboard.Domain.Entities.Features;
-using FeaturesManagementDashboard.Domain.Repositories;
-using FeaturesManagementDashboard.Infrastructure.Settings;
-using Microsoft.FeatureManagement;
-
-namespace FeaturesManagementDashboard.Infrastructure.Providers
+﻿namespace FeaturesManagementDashboard.Infrastructure.Providers
 {
     internal class UmbracoFeatureDefinitionProvider : IFeatureDefinitionProvider
     {

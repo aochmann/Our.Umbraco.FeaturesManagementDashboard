@@ -1,7 +1,4 @@
-﻿using System;
-using SharedAbstractions.ValueObjects;
-
-namespace FeaturesManagementDashboard.Domain.Entities.Features
+﻿namespace FeaturesManagementDashboard.Domain.Entities.Features
 {
     public class FeatureId : ValueObject<string>
     {

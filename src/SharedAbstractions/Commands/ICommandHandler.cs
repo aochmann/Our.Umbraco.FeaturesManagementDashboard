@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace SharedAbstractions.Commands
+﻿namespace SharedAbstractions.Commands
 {
     public interface ICommandHandler<in TCommand> where TCommand : class, ICommand
     {

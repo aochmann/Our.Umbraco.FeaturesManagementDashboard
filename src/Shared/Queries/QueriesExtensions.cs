@@ -1,9 +1,4 @@
-﻿using System;
-using System.Reflection;
-using Microsoft.Extensions.DependencyInjection;
-using SharedAbstractions.Queries;
-
-namespace Shared.Queries
+﻿namespace Shared.Queries
 {
     public static class QueriesExtensions
     {

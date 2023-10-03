@@ -1,0 +1,13 @@
+﻿global using System.Collections.Generic;
+global using System.Threading.Tasks;
+global using FeaturesManagementDashboard.Application.Commands;
+global using FeaturesManagementDashboard.Application.DI;
+global using FeaturesManagementDashboard.Application.DTO.Features;
+global using FeaturesManagementDashboard.Application.Queries;
+global using Microsoft.AspNetCore.Mvc;
+global using Umbraco.Cms.Web.BackOffice.Controllers;
+global using Umbraco.Cms.Core.DependencyInjection;
+global using FeaturesManagementDashboard.Infrastructure.Extensions;
+global using Microsoft.Extensions.DependencyInjection;
+global using FeaturesManagementDashboard.Infrastructure;
+global using FeaturesManagementDashboard.Application.Extensions;

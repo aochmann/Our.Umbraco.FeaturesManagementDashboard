@@ -1,9 +1,4 @@
-﻿using FeaturesManagementDashboard.Infrastructure.Services;
-using Umbraco.Cms.Core.DependencyInjection;
-using Umbraco.Cms.Core.Services;
-using Umbraco.Extensions;
-
-namespace FeaturesManagementDashboard.Infrastructure.Extensions
+﻿namespace FeaturesManagementDashboard.Infrastructure.Extensions
 {
     internal static class DashboardExtensions
     {

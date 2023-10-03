@@ -1,13 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using FeaturesManagementDashboard.Application.DTO.Features;
-using FeaturesManagementDashboard.Application.Queries;
-using FeaturesManagementDashboard.Domain.Repositories;
-using FeaturesManagementDashboard.Infrastructure.Mappers;
-
-namespace FeaturesManagementDashboard.Infrastructure.Queries.Handlers
+﻿namespace FeaturesManagementDashboard.Infrastructure.Queries.Handlers
 {
     internal class GetFeaturesHandler : IQueryHandler<GetFeatures, IEnumerable<FeatureDto>>
     {

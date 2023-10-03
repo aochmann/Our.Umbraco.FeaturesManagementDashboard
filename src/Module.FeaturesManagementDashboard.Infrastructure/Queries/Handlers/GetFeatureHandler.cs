@@ -1,12 +1,4 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using FeaturesManagementDashboard.Application.DTO.Features;
-using FeaturesManagementDashboard.Application.Queries;
-using FeaturesManagementDashboard.Domain.Entities.Features;
-using FeaturesManagementDashboard.Domain.Repositories;
-using FeaturesManagementDashboard.Infrastructure.Mappers;
-
-namespace FeaturesManagementDashboard.Infrastructure.Queries.Handlers
+﻿namespace FeaturesManagementDashboard.Infrastructure.Queries.Handlers
 {
     internal class GetFeatureHandler : IQueryHandler<GetFeature, FeatureDto>
     {

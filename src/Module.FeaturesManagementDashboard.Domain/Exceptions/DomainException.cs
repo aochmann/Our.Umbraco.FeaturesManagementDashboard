@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FeaturesManagementDashboard.Domain.Exceptions
+﻿namespace FeaturesManagementDashboard.Domain.Exceptions
 {
     public abstract class DomainException : Exception
     {

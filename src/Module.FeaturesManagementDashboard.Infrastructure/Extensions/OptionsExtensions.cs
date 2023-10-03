@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-
-namespace FeaturesManagementDashboard.Infrastructure.Extensions
+﻿namespace FeaturesManagementDashboard.Infrastructure.Extensions
 {
     internal static class OptionsExtensions
     {

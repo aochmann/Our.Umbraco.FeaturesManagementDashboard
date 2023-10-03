@@ -1,13 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using FeaturesManagementDashboard.Application.Commands;
-using FeaturesManagementDashboard.Application.DI;
-using FeaturesManagementDashboard.Application.DTO.Features;
-using FeaturesManagementDashboard.Application.Queries;
-using Microsoft.AspNetCore.Mvc;
-using Umbraco.Cms.Web.BackOffice.Controllers;
-
-namespace FeaturesManagementDashboard.Controllers
+﻿namespace FeaturesManagementDashboard.Controllers
 {
     [Route("umbraco/backoffice/api/[controller]")]
     public class FeaturesManagementDashboardController : UmbracoAuthorizedApiController
@@ -49,7 +40,7 @@ namespace FeaturesManagementDashboard.Controllers
 
             await _commandDispatcher.DispatchAsync(command);
 
-            return CreatedAtAction(nameof(GetFeature), command.FeatureId);
+            return CreatedAtAction(nameof(Application.Queries.GetFeature), command.FeatureId);
         }
     }
 }

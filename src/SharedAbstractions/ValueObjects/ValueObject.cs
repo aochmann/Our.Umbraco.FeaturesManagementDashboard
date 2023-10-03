@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-
-namespace SharedAbstractions.ValueObjects
+﻿namespace SharedAbstractions.ValueObjects
 {
     public abstract class ValueObject<T> : IEquatable<ValueObject<T>>
     {

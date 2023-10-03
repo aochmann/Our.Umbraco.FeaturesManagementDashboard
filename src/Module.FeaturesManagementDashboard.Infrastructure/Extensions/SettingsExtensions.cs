@@ -1,8 +1,4 @@
-﻿using FeaturesManagementDashboard.Infrastructure.Settings;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace FeaturesManagementDashboard.Infrastructure.Extensions
+﻿namespace FeaturesManagementDashboard.Infrastructure.Extensions
 {
 #pragma warning disable CS8604 // Possible null reference argument.
 

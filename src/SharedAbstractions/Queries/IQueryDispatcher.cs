@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace SharedAbstractions.Queries
+﻿namespace SharedAbstractions.Queries
 {
     public interface IQueryDispatcher
     {

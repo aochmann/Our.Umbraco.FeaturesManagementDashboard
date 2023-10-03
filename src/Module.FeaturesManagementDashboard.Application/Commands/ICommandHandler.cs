@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace FeaturesManagementDashboard.Application.Commands
+﻿namespace FeaturesManagementDashboard.Application.Commands
 {
     public interface ICommandHandler<in TCommand>
         where TCommand : class, ICommand

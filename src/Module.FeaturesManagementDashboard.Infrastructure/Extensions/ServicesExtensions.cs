@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-
-namespace FeaturesManagementDashboard.Infrastructure.Extensions
+﻿namespace FeaturesManagementDashboard.Infrastructure.Extensions
 {
     internal static class ServicesExtensions
     {

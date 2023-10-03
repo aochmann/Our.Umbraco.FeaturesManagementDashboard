@@ -1,19 +1,4 @@
-﻿using System.Linq;
-using FeaturesManagementDashboard.Application.DI;
-using FeaturesManagementDashboard.Domain.Repositories;
-using FeaturesManagementDashboard.Infrastructure.Comparers;
-using FeaturesManagementDashboard.Infrastructure.Extensions;
-using FeaturesManagementDashboard.Infrastructure.Migrations;
-using FeaturesManagementDashboard.Infrastructure.Settings;
-using Umbraco.Cms.Core.Composing;
-using Umbraco.Cms.Core.DependencyInjection;
-using Umbraco.Cms.Core.Migrations;
-using Umbraco.Cms.Infrastructure.Scoping;
-using Umbraco.Cms.Core.Services;
-using Umbraco.Cms.Infrastructure.Migrations;
-using Umbraco.Cms.Infrastructure.Migrations.Upgrade;
-
-namespace FeaturesManagementDashboard.Infrastructure.Initializers
+﻿namespace FeaturesManagementDashboard.Infrastructure.Initializers
 {
 #pragma warning disable SA1402 // File may only contain a single type
 

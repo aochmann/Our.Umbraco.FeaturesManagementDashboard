@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SharedAbstractions.Domain
+﻿namespace SharedAbstractions.Domain
 {
     public interface IEvent
     {

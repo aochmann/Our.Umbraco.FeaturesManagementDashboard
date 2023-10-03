@@ -1,8 +1,4 @@
-﻿using System.Reflection;
-using Microsoft.Extensions.DependencyInjection;
-using SharedAbstractions.Domain;
-
-namespace Shared.Domain
+﻿namespace Shared.Domain
 {
     public static class RepositoriesExtensions
     {

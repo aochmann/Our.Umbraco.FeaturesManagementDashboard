@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace SharedAbstractions.Commands
+﻿namespace SharedAbstractions.Commands
 {
     public interface ICommandDispatcher
     {

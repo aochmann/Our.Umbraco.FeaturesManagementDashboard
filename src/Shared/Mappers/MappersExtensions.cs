@@ -1,8 +1,4 @@
-﻿using System.Reflection;
-using Microsoft.Extensions.DependencyInjection;
-using SharedAbstractions.Mappers;
-
-namespace Shared.Mappers
+﻿namespace Shared.Mappers
 {
     public static class MappersExtensions
     {

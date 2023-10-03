@@ -1,18 +1,4 @@
-﻿using FeaturesManagementDashboard.Application.Commands;
-using FeaturesManagementDashboard.Application.Queries;
-using FeaturesManagementDashboard.Infrastructure.HandlerDispatchers;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.FeatureManagement;
-using Microsoft.FeatureManagement.FeatureFilters;
-using Shared.Domain;
-using Shared.Queries;
-using SharedAbstractions.DI;
-using Umbraco.Cms.Core.Configuration.Models;
-using Umbraco.Cms.Core.DependencyInjection;
-using InMemoryQueryDispatcher = FeaturesManagementDashboard.Infrastructure.HandlerDispatchers.InMemoryQueryDispatcher;
-
-namespace FeaturesManagementDashboard.Infrastructure.Extensions
+﻿namespace FeaturesManagementDashboard.Infrastructure.Extensions
 {
 #pragma warning disable CS8604 // Possible null reference argument.
 

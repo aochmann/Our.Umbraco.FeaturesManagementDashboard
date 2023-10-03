@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace SharedAbstractions.Queries
+﻿namespace SharedAbstractions.Queries
 {
     public interface IQueryHandler<in TQuery, TResult> where TQuery : class, IQuery<TQuery, TResult>
     {

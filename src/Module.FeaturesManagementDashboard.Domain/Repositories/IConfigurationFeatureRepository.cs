@@ -1,9 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using FeaturesManagementDashboard.Domain.Entities.Features;
-using SharedAbstractions.Domain;
-
-namespace FeaturesManagementDashboard.Domain.Repositories
+﻿namespace FeaturesManagementDashboard.Domain.Repositories
 {
     public interface IConfigurationFeatureRepository : IRepository<Feature, FeatureId>
     {

@@ -1,11 +1,4 @@
-﻿using FeaturesManagementDashboard.Application.DI;
-using FeaturesManagementDashboard.Application.Extensions;
-using FeaturesManagementDashboard.Infrastructure;
-using FeaturesManagementDashboard.Infrastructure.Extensions;
-using Microsoft.Extensions.DependencyInjection;
-using Umbraco.Cms.Core.DependencyInjection;
-
-namespace FeaturesManagementDashboard
+﻿namespace FeaturesManagementDashboard
 {
     internal class ModuleStartup
     {

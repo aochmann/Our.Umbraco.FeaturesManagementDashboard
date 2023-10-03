@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace SharedAbstractions.DI
+﻿namespace SharedAbstractions.DI
 {
     public interface IDependencyResolver
     {

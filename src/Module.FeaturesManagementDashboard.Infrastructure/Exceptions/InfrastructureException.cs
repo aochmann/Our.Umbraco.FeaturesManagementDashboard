@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FeaturesManagementDashboard.Infrastructure.Exceptions
+﻿namespace FeaturesManagementDashboard.Infrastructure.Exceptions
 {
     public abstract class InfrastructureException : Exception
     {
