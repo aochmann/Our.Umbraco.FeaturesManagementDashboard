@@ -1,11 +1,10 @@
-﻿namespace FeaturesManagementDashboard.Domain.Exceptions
-{
-    public class FeatureNotFoundException : DomainException
-    {
-        public override string Code => "feature_not_found";
+﻿namespace FeaturesManagementDashboard.Domain.Exceptions;
 
-        public FeatureNotFoundException(string featureName) : base($"Feature configuration ({featureName}) not found.")
-        {
-        }
+public class FeatureNotFoundException : DomainException
+{
+    public override string Code => "feature_not_found";
+
+    public FeatureNotFoundException(string featureName) : base($"Feature configuration ({featureName}) not found.")
+    {
     }
 }

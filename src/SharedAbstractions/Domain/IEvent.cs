@@ -1,7 +1,6 @@
-﻿namespace SharedAbstractions.Domain
+﻿namespace SharedAbstractions.Domain;
+
+public interface IEvent
 {
-    public interface IEvent
-    {
-        DateTime Created => DateTime.UtcNow;
-    }
+    DateTime Created => DateTime.UtcNow;
 }

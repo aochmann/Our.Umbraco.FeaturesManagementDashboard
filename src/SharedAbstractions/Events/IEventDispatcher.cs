@@ -1,9 +1,8 @@
-﻿namespace SharedAbstractions.Events
-{
-    public interface IEventDispatcher
-    {
-        ValueTask DispatchAsync<TEvent>(TEvent @event) where TEvent : IEvent;
+﻿namespace SharedAbstractions.Events;
 
-        void Subscribe();
-    }
+public interface IEventDispatcher
+{
+    ValueTask DispatchAsync<TEvent>(TEvent @event) where TEvent : IEvent;
+
+    void Subscribe();
 }

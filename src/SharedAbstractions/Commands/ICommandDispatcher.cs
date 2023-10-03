@@ -1,7 +1,6 @@
-﻿namespace SharedAbstractions.Commands
+﻿namespace SharedAbstractions.Commands;
+
+public interface ICommandDispatcher
 {
-    public interface ICommandDispatcher
-    {
-        ValueTask DispatchAsync<TCommand>(TCommand command) where TCommand : class, ICommand;
-    }
+    ValueTask DispatchAsync<TCommand>(TCommand command) where TCommand : class, ICommand;
 }

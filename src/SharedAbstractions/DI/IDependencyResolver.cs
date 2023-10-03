@@ -1,9 +1,8 @@
-﻿namespace SharedAbstractions.DI
-{
-    public interface IDependencyResolver
-    {
-        THandler Resolve<THandler>();
+﻿namespace SharedAbstractions.DI;
 
-        IEnumerable<THandler> ResolveMany<THandler>();
-    }
+public interface IDependencyResolver
+{
+    THandler Resolve<THandler>();
+
+    IEnumerable<THandler> ResolveMany<THandler>();
 }

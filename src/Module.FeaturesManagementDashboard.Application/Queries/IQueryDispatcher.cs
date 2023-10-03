@@ -1,8 +1,7 @@
-﻿namespace FeaturesManagementDashboard.Application.Queries
+﻿namespace FeaturesManagementDashboard.Application.Queries;
+
+public interface IQueryDispatcher
 {
-    public interface IQueryDispatcher
-    {
-        ValueTask<TResult> DispatchAsync<TQuery, TResult>(IQuery<TQuery, TResult> query)
-            where TQuery : class, IQuery<TQuery, TResult>;
-    }
+    ValueTask<TResult> DispatchAsync<TQuery, TResult>(IQuery<TQuery, TResult> query)
+        where TQuery : class, IQuery<TQuery, TResult>;
 }

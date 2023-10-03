@@ -1,26 +1,25 @@
-﻿namespace FeaturesManagementDashboard
+﻿namespace FeaturesManagementDashboard;
+
+internal class ModuleStartup
 {
-    internal class ModuleStartup
+    private readonly IUmbracoBuilder _umbracoBuilder;
+
+    public ModuleStartup(IUmbracoBuilder umbracoBuilder)
+        => _umbracoBuilder = umbracoBuilder;
+
+    public IUmbracoBuilder Build()
     {
-        private readonly IUmbracoBuilder _umbracoBuilder;
+        var serviceCollection = new ServiceCollection();
 
-        public ModuleStartup(IUmbracoBuilder umbracoBuilder)
-            => _umbracoBuilder = umbracoBuilder;
+        serviceCollection
+            .AddApplication()
+            .AddInfrastructure(_umbracoBuilder);
 
-        public IUmbracoBuilder Build()
-        {
-            var serviceCollection = new ServiceCollection();
+        var serviceProvider = serviceCollection.BuildServiceProvider();
 
-            serviceCollection
-                .AddApplication()
-                .AddInfrastructure(_umbracoBuilder);
+        _ = _umbracoBuilder.Services
+            .AddSingleton<ICompositionRoot>(new CompositionRoot(serviceProvider));
 
-            var serviceProvider = serviceCollection.BuildServiceProvider();
-
-            _ = _umbracoBuilder.Services
-                .AddSingleton<ICompositionRoot>(new CompositionRoot(serviceProvider));
-
-            return _umbracoBuilder;
-        }
+        return _umbracoBuilder;
     }
 }

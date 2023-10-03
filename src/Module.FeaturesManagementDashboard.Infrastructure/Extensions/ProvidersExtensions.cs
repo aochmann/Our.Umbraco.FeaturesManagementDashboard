@@ -1,9 +1,8 @@
-﻿namespace FeaturesManagementDashboard.Infrastructure.Extensions
+﻿namespace FeaturesManagementDashboard.Infrastructure.Extensions;
+
+internal static class ProvidersExtensions
 {
-    internal static class ProvidersExtensions
-    {
-        public static IServiceCollection AddProviders(this IServiceCollection serviceCollection)
-            => serviceCollection
-                .AddSingleton<IFeatureDefinitionProvider, UmbracoFeatureDefinitionProvider>();
-    }
+    public static IServiceCollection AddProviders(this IServiceCollection serviceCollection)
+        => serviceCollection
+            .AddSingleton<IFeatureDefinitionProvider, UmbracoFeatureDefinitionProvider>();
 }

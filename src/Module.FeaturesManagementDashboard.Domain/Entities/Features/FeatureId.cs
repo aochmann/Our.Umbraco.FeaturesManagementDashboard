@@ -1,27 +1,26 @@
-﻿namespace FeaturesManagementDashboard.Domain.Entities.Features
+﻿namespace FeaturesManagementDashboard.Domain.Entities.Features;
+
+public class FeatureId : ValueObject<string>
 {
-    public class FeatureId : ValueObject<string>
+    public string Id { get; set; }
+
+    public FeatureId(string name)
     {
-        public string Id { get; set; }
-
-        public FeatureId(string name)
+        if (string.IsNullOrWhiteSpace(name))
         {
-            if (string.IsNullOrWhiteSpace(name))
-            {
-                throw new ArgumentNullException(nameof(name));
-            }
-
-            Id = name;
+            throw new ArgumentNullException(nameof(name));
         }
 
-        public FeatureId(FeatureId featureId)
-        {
-            if (featureId is null)
-            {
-                throw new ArgumentNullException(nameof(featureId));
-            }
+        Id = name;
+    }
 
-            Id = featureId.Id;
+    public FeatureId(FeatureId featureId)
+    {
+        if (featureId is null)
+        {
+            throw new ArgumentNullException(nameof(featureId));
         }
+
+        Id = featureId.Id;
     }
 }

@@ -1,11 +1,10 @@
-﻿namespace FeaturesManagementDashboard.Application.Extensions
+﻿namespace FeaturesManagementDashboard.Application.Extensions;
+
+public static class ApplicationExtensions
 {
-    public static class ApplicationExtensions
+    public static IServiceCollection AddApplication(this IServiceCollection serviceCollection)
     {
-        public static IServiceCollection AddApplication(this IServiceCollection serviceCollection)
-        {
-            _ = serviceCollection.AddCommands(typeof(ICommandHandler<>));
-            return serviceCollection;
-        }
+        _ = serviceCollection.AddCommands(typeof(ICommandHandler<>));
+        return serviceCollection;
     }
 }

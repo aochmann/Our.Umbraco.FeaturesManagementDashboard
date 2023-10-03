@@ -1,8 +1,7 @@
-﻿namespace FeaturesManagementDashboard.Domain.Entities.Features
+﻿namespace FeaturesManagementDashboard.Domain.Entities.Features;
+
+public static class FeatureIdExtensions
 {
-    public static class FeatureIdExtensions
-    {
-        public static FeatureId ToFeatureId(this string featureId)
-            => new(featureId);
-    }
+    public static FeatureId ToFeatureId(this string featureId)
+        => new(featureId);
 }

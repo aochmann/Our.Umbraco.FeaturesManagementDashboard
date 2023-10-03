@@ -1,12 +1,11 @@
-﻿namespace FeaturesManagementDashboard.Infrastructure.Mappers
-{
-    internal class FeatureManagementDashboardTableMapper : ClassMapper<FeatureDto>
-    {
-        public FeatureManagementDashboardTableMapper()
-        {
-            Table(FeatureManagementConstants.TableName);
+﻿namespace FeaturesManagementDashboard.Infrastructure.Mappers;
 
-            AutoMap();
-        }
+internal class FeatureManagementDashboardTableMapper : ClassMapper<FeatureDto>
+{
+    public FeatureManagementDashboardTableMapper()
+    {
+        Table(FeatureManagementConstants.TableName);
+
+        AutoMap();
     }
 }

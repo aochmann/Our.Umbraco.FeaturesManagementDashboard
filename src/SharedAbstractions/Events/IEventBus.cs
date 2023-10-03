@@ -1,7 +1,6 @@
-﻿namespace SharedAbstractions.Events
+﻿namespace SharedAbstractions.Events;
+
+public interface IEventBus
 {
-    public interface IEventBus
-    {
-        ValueTask SendAsync<TEvent>(TEvent @event) where TEvent : IEvent;
-    }
+    ValueTask SendAsync<TEvent>(TEvent @event) where TEvent : IEvent;
 }

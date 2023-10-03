@@ -1,11 +1,10 @@
-﻿namespace FeaturesManagementDashboard.Infrastructure.Exceptions
-{
-    public abstract class InfrastructureException : Exception
-    {
-        public virtual string Code { get; } = null!;
+﻿namespace FeaturesManagementDashboard.Infrastructure.Exceptions;
 
-        protected InfrastructureException(string message) : base(message)
-        {
-        }
+public abstract class InfrastructureException : Exception
+{
+    public virtual string Code { get; } = null!;
+
+    protected InfrastructureException(string message) : base(message)
+    {
     }
 }
