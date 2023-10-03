@@ -1,6 +1,5 @@
-﻿namespace FeaturesManagementDashboard.Application.Commands
+﻿namespace FeaturesManagementDashboard.Application.Commands;
+
+public interface ICommand
 {
-    public interface ICommand
-    {
-    }
 }

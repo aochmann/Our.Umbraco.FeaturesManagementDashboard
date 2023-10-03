@@ -1,23 +1,20 @@
-﻿using System;
+﻿namespace Shared.Exceptions;
 
-namespace Shared.Exceptions
+public class DependencyNotFoundException : Exception
 {
-    public class DependencyNotFoundException : Exception
+    public DependencyNotFoundException()
     {
-        public DependencyNotFoundException()
-        {
-        }
+    }
 
-        public DependencyNotFoundException(string message) : base(message)
-        {
-        }
+    public DependencyNotFoundException(string message) : base(message)
+    {
+    }
 
-        public DependencyNotFoundException(Type type) : base(type.ToString())
-        {
-        }
+    public DependencyNotFoundException(Type type) : base(type.ToString())
+    {
+    }
 
-        public DependencyNotFoundException(string message, Exception innerException) : base(message, innerException)
-        {
-        }
+    public DependencyNotFoundException(string message, Exception innerException) : base(message, innerException)
+    {
     }
 }

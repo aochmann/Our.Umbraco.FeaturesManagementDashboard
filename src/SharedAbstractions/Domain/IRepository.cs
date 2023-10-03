@@ -1,11 +1,10 @@
-﻿namespace SharedAbstractions.Domain
-{
-    public interface IRepository
-    {
-    }
+﻿namespace SharedAbstractions.Domain;
 
-    public interface IRepository<TEntity, TEntityIdentity> : IRepository
-        where TEntity : AggregateRoot<TEntityIdentity>
-    {
-    }
+public interface IRepository
+{
+}
+
+public interface IRepository<TEntity, TEntityIdentity> : IRepository
+    where TEntity : AggregateRoot<TEntityIdentity>
+{
 }

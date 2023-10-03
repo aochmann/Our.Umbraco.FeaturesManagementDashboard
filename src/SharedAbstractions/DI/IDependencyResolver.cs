@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
+﻿namespace SharedAbstractions.DI;
 
-namespace SharedAbstractions.DI
+public interface IDependencyResolver
 {
-    public interface IDependencyResolver
-    {
-        THandler Resolve<THandler>();
+    THandler Resolve<THandler>();
 
-        IEnumerable<THandler> ResolveMany<THandler>();
-    }
+    IEnumerable<THandler> ResolveMany<THandler>();
 }

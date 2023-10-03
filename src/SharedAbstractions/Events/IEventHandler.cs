@@ -1,10 +1,6 @@
-﻿using System.Threading.Tasks;
-using SharedAbstractions.Domain;
+﻿namespace SharedAbstractions.Events;
 
-namespace SharedAbstractions.Events
+public interface IEventHandler<in TEvent> where TEvent : IEvent
 {
-    public interface IEventHandler<in TEvent> where TEvent : IEvent
-    {
-        ValueTask HandleAsync(TEvent @event);
-    }
+    ValueTask HandleAsync(TEvent @event);
 }

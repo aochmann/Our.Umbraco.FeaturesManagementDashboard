@@ -1,82 +1,74 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using FeaturesManagementDashboard.Domain.Entities.Features;
-using FeaturesManagementDashboard.Domain.Repositories;
-using Microsoft.Extensions.Configuration;
+﻿namespace FeaturesManagementDashboard.Infrastructure.Repositories;
 
-namespace FeaturesManagementDashboard.Infrastructure.Repositories
+internal class ConfigurationRepository : IConfigurationFeatureRepository
 {
-    internal class ConfigurationRepository : IConfigurationFeatureRepository
+    private readonly IConfigurationSection _featureManagementSection;
+    private readonly IConfiguration _configuration;
+
+    public ConfigurationRepository(IConfiguration configuration)
     {
-        private readonly IConfigurationSection _featureManagementSection;
-        private readonly IConfiguration _configuration;
+        _configuration = configuration;
 
-        public ConfigurationRepository(IConfiguration configuration)
+        _featureManagementSection = configuration
+            .GetSection("FeatureManagement");
+    }
+
+    public async ValueTask<IEnumerable<Feature>> GetAllAsync()
+        => _featureManagementSection
+            .GetChildren()
+            .Select(featureSection => GetFeature(featureSection))
+            .Where(feature => feature is not null)
+            .ToArray();
+
+    public async ValueTask<Feature> GetAsync(FeatureId featureId)
+        => _featureManagementSection
+            .GetChildren()
+            .Select(featureSection => GetFeature(featureSection))
+            .Where(feature => feature is not null)
+            .FirstOrDefault(feature => feature.Id.Equals(featureId));
+
+    public async ValueTask SaveAsync(Feature feature)
+    {
+        var featureSection = GetFeatureSection(feature.Name);
+
+        featureSection.Value = feature.Status.ToString();
+
+        var root = _configuration as IConfigurationRoot;
+
+        if (root is null)
         {
-            _configuration = configuration;
-
-            _featureManagementSection = configuration
-                           .GetSection("FeatureManagement");
+            return;
         }
 
-        public async ValueTask<IEnumerable<Feature>> GetAllAsync()
-            => _featureManagementSection
-                .GetChildren()
-                .Select(featureSection => GetFeature(featureSection))
-                .Where(feature => feature is not null)
-                .ToArray();
+        var providers = root.Providers
+            .Where(provider =>
+                provider.TryGet(featureSection.Path, out var _))
+            .ToArray();
 
-        public async ValueTask<Feature> GetAsync(FeatureId featureId)
-            => _featureManagementSection
-                .GetChildren()
-                .Select(featureSection => GetFeature(featureSection))
-                .Where(feature => feature is not null)
-                .FirstOrDefault(feature => feature.Id.Equals(featureId));
-
-        public async ValueTask SaveAsync(Feature feature)
+        foreach (var provider in providers)
         {
-            var featureSection = GetFeatureSection(feature.Name);
+            provider.Set(featureSection.Path, featureSection.Value);
+        }
+    }
 
-            featureSection.Value = feature.Status.ToString();
+    private IConfigurationSection GetFeatureSection(string featureName)
+        => _featureManagementSection.GetChildren()
+            .FirstOrDefault(section => section.Key.Equals(featureName));
 
-            var root = _configuration as IConfigurationRoot;
+    private static Feature GetFeature(IConfigurationSection featureSection)
+    {
+        var subConfigurations = featureSection.GetChildren();
 
-            if (root is null)
-            {
-                return;
-            }
+        if (!subConfigurations?.Any() ?? false)
+        {
+            var featureName = featureSection.Key;
+            var featureStatus = featureSection.Get<bool>();
 
-            var providers = root.Providers
-                .Where(provider =>
-                    provider.TryGet(featureSection.Path, out var _))
-                .ToArray();
-
-            foreach (var provider in providers)
-            {
-                provider.Set(featureSection.Path, featureSection.Value);
-            }
+            return new Feature(
+                featureName,
+                featureStatus);
         }
 
-        private IConfigurationSection GetFeatureSection(string featureName)
-            => _featureManagementSection.GetChildren()
-                .FirstOrDefault(section => section.Key.Equals(featureName));
-
-        private static Feature GetFeature(IConfigurationSection featureSection)
-        {
-            var subConfigurations = featureSection.GetChildren();
-
-            if (!subConfigurations?.Any() ?? false)
-            {
-                var featureName = featureSection.Key;
-                var featureStatus = featureSection.Get<bool>();
-
-                return new Feature(
-                   featureName,
-                   featureStatus);
-            }
-
-            return null;
-        }
+        return null;
     }
 }

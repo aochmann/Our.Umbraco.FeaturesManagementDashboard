@@ -1,13 +1,10 @@
-﻿using System;
+﻿namespace FeaturesManagementDashboard.Domain.Exceptions;
 
-namespace FeaturesManagementDashboard.Domain.Exceptions
+public abstract class DomainException : Exception
 {
-    public abstract class DomainException : Exception
-    {
-        public virtual string Code { get; }
+    public virtual string Code { get; } = string.Empty;
 
-        protected DomainException(string message) : base(message)
-        {
-        }
+    protected DomainException(string message) : base(message)
+    {
     }
 }

@@ -1,7 +1,6 @@
-﻿namespace FeaturesManagementDashboard.Infrastructure.Constants
+﻿namespace FeaturesManagementDashboard.Infrastructure.Constants;
+
+internal static class FeatureManagementConstants
 {
-    internal static class FeatureManagementConstants
-    {
-        public const string TableName = "FeatureManagementDashboard";
-    }
+    public const string TableName = "FeatureManagementDashboard";
 }

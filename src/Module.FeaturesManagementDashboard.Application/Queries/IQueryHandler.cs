@@ -1,10 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿namespace FeaturesManagementDashboard.Application.Queries;
 
-namespace FeaturesManagementDashboard.Application.Queries
+public interface IQueryHandler<in TQuery, TResult>
+    where TQuery : class, IQuery<TQuery, TResult>
 {
-    public interface IQueryHandler<in TQuery, TResult>
-        where TQuery : class, IQuery<TQuery, TResult>
-    {
-        ValueTask<TResult> HandleAsync(TQuery query);
-    }
+    ValueTask<TResult> HandleAsync(TQuery query);
 }

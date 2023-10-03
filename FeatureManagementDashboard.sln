@@ -9,24 +9,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		README.md = README.md
+		src\Directory.Build.props = src\Directory.Build.props
+		src\Directory.Build.targets = src\Directory.Build.targets
+		src\.editorconfig = src\.editorconfig
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedAbstractions", "src\SharedAbstractions\SharedAbstractions.csproj", "{E4AC0222-272C-4877-A7F8-93A6940F5B8D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{F23CE0A6-B3D6-491D-B076-97A6276F3C87}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "linting", "linting", "{B8622A1D-752B-4A21-BB4B-24D7BE135C11}"
-	ProjectSection(SolutionItems) = preProject
-		linting\.editorconfig = linting\.editorconfig
-		linting\codeanalysis.ruleset = linting\codeanalysis.ruleset
-		linting\stylecop.json = linting\stylecop.json
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{6DA2C8AD-D137-4945-A6FE-71CB8C9CC0A4}"
-	ProjectSection(SolutionItems) = preProject
-		Directory.Build.props = Directory.Build.props
-		Directory.Build.targets = Directory.Build.targets
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{3AA34331-F848-41FC-A338-24E6F093EA3E}"
 EndProject
@@ -83,8 +73,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B9D508CF-9750-43F1-A880-8CD5CC4ACD59} = {F23CE0A6-B3D6-491D-B076-97A6276F3C87}
 		{E4AC0222-272C-4877-A7F8-93A6940F5B8D} = {F23CE0A6-B3D6-491D-B076-97A6276F3C87}
-		{B8622A1D-752B-4A21-BB4B-24D7BE135C11} = {4D8A8188-2AE4-40EC-A129-5796B31030DE}
-		{6DA2C8AD-D137-4945-A6FE-71CB8C9CC0A4} = {4D8A8188-2AE4-40EC-A129-5796B31030DE}
 		{81A6F767-2E5B-4137-AA7D-E04525C59151} = {3AA34331-F848-41FC-A338-24E6F093EA3E}
 		{CDCF621C-1B5B-4FE7-84BC-2E9193AA69F4} = {81A6F767-2E5B-4137-AA7D-E04525C59151}
 		{AC308BCF-19F3-42E0-B0CD-AD4660A1A6A5} = {81A6F767-2E5B-4137-AA7D-E04525C59151}

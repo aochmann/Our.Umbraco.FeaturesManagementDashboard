@@ -1,6 +1,5 @@
-﻿namespace SharedAbstractions.Commands
+﻿namespace SharedAbstractions.Commands;
+
+public interface ICommand
 {
-    public interface ICommand
-    {
-    }
 }

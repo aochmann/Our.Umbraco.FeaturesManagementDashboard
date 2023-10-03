@@ -1,31 +1,22 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using FeaturesManagementDashboard.Application.DTO.Features;
-using FeaturesManagementDashboard.Application.Queries;
-using FeaturesManagementDashboard.Domain.Entities.Features;
-using FeaturesManagementDashboard.Domain.Repositories;
-using FeaturesManagementDashboard.Infrastructure.Mappers;
+﻿namespace FeaturesManagementDashboard.Infrastructure.Queries.Handlers;
 
-namespace FeaturesManagementDashboard.Infrastructure.Queries.Handlers
+internal class GetFeatureHandler : IQueryHandler<GetFeature, FeatureDto>
 {
-    internal class GetFeatureHandler : IQueryHandler<GetFeature, FeatureDto>
+    private readonly IUmbracoFeatureRepository _featureRepository;
+    private readonly IFeatureItemDtoMapper _featureDtoMapper;
+
+    public GetFeatureHandler(IUmbracoFeatureRepository featureRepository, IFeatureItemDtoMapper featureDtoMapper)
     {
-        private readonly IUmbracoFeatureRepository _featureRepository;
-        private readonly IFeatureItemDtoMapper _featureDtoMapper;
+        _featureRepository = featureRepository;
+        _featureDtoMapper = featureDtoMapper;
+    }
 
-        public GetFeatureHandler(IUmbracoFeatureRepository featureRepository, IFeatureItemDtoMapper featureDtoMapper)
-        {
-            _featureRepository = featureRepository;
-            _featureDtoMapper = featureDtoMapper;
-        }
+    public async ValueTask<FeatureDto> HandleAsync(GetFeature query)
+    {
+        var feature = await _featureRepository.GetAsync(query.FeatureId.ToFeatureId());
 
-        public async ValueTask<FeatureDto> HandleAsync(GetFeature query)
-        {
-            var feature = await _featureRepository.GetAsync(query.FeatureId.ToFeatureId());
-
-            return feature is not null
-                ? _featureDtoMapper.Map(feature)
-                : null;
-        }
+        return feature is not null
+            ? _featureDtoMapper.Map(feature)
+            : null;
     }
 }

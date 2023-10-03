@@ -1,7 +1,6 @@
-﻿namespace SharedAbstractions.Mappers
+﻿namespace SharedAbstractions.Mappers;
+
+public interface IMapper<in TModelIn, TResult>
 {
-    public interface IMapper<in TModelIn, TResult>
-    {
-        TResult Map(TModelIn model);
-    }
+    TResult Map(TModelIn model);
 }

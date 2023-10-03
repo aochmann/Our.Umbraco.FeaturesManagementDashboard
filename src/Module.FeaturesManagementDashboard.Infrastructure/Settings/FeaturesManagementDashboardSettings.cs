@@ -1,8 +1,7 @@
-﻿namespace FeaturesManagementDashboard.Infrastructure.Settings
+﻿namespace FeaturesManagementDashboard.Infrastructure.Settings;
+
+public record FeaturesManagementDashboardSettings
 {
-    public record FeaturesManagementDashboardSettings
-    {
-        public bool Enabled { get; init; }
-        public bool Override { get; init; }
-    }
+    public bool Enabled { get; init; }
+    public bool Override { get; init; }
 }

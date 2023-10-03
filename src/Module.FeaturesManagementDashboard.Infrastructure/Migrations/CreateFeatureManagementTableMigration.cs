@@ -1,39 +1,34 @@
-﻿using FeaturesManagementDashboard.Application.DTO.Features;
-using FeaturesManagementDashboard.Infrastructure.Constants;
-using Umbraco.Cms.Infrastructure.Migrations;
+﻿namespace FeaturesManagementDashboard.Infrastructure.Migrations;
 
-namespace FeaturesManagementDashboard.Infrastructure.Migrations
+internal class CreateFeatureManagementTableMigration : MigrationBase
 {
-    internal class CreateFeatureManagementTableMigration : MigrationBase
+    public CreateFeatureManagementTableMigration(IMigrationContext context) : base(context)
     {
-        public CreateFeatureManagementTableMigration(IMigrationContext context) : base(context)
+    }
+
+    protected override void Migrate()
+    {
+        if (TableExists(FeatureManagementConstants.TableName))
         {
+            return;
         }
 
-        protected override void Migrate()
-        {
-            if (TableExists(FeatureManagementConstants.TableName))
-            {
-                return;
-            }
+        var idColumnName = nameof(FeatureDto.Id);
+        var nameColumnName = nameof(FeatureDto.Name);
+        var statusColumnName = nameof(FeatureDto.Status);
 
-            var idColumnName = nameof(FeatureDto.Id);
-            var nameColumnName = nameof(FeatureDto.Name);
-            var statusColumnName = nameof(FeatureDto.Status);
+        var tableBuilder = Create
+            .Table(FeatureManagementConstants.TableName);
 
-            var tableBuilder = Create
-                .Table(FeatureManagementConstants.TableName);
-
-            tableBuilder
-                .WithColumn(idColumnName)
-                    .AsString()
-                    .NotNullable()
-                .WithColumn(nameColumnName)
-                    .AsString()
-                    .NotNullable()
-                .WithColumn(statusColumnName)
-                    .AsBoolean()
-                .Do();
-        }
+        tableBuilder
+            .WithColumn(idColumnName)
+            .AsString()
+            .NotNullable()
+            .WithColumn(nameColumnName)
+            .AsString()
+            .NotNullable()
+            .WithColumn(statusColumnName)
+            .AsBoolean()
+            .Do();
     }
 }

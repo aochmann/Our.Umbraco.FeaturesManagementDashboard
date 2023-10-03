@@ -1,10 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿namespace FeaturesManagementDashboard.Infrastructure.Extensions;
 
-namespace FeaturesManagementDashboard.Infrastructure.Extensions
+internal static class ServicesExtensions
 {
-    internal static class ServicesExtensions
-    {
-        public static IServiceCollection AddServices(this IServiceCollection serviceCollection)
-            => serviceCollection;
-    }
+    public static IServiceCollection AddServices(this IServiceCollection serviceCollection)
+        => serviceCollection;
 }

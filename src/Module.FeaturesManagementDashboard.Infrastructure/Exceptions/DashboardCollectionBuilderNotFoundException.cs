@@ -1,13 +1,10 @@
-﻿using Umbraco.Cms.Core.Dashboards;
+﻿namespace FeaturesManagementDashboard.Infrastructure.Exceptions;
 
-namespace FeaturesManagementDashboard.Infrastructure.Exceptions
+public class DashboardCollectionBuilderNotFoundException : InfrastructureException
 {
-    public class DashboardCollectionBuilderNotFoundException : InfrastructureException
-    {
-        public override string Code => "dashboard_collection_builder_not_found";
+    public override string Code => "dashboard_collection_builder_not_found";
 
-        public DashboardCollectionBuilderNotFoundException() : base($"{nameof(DashboardCollectionBuilder)} not found. Check if you register this dependency.")
-        {
-        }
+    public DashboardCollectionBuilderNotFoundException() : base($"{nameof(DashboardCollectionBuilder)} not found. Check if you register this dependency.")
+    {
     }
 }

@@ -1,23 +1,17 @@
-﻿using System;
-using System.Threading.Tasks;
-using FeaturesManagementDashboard.Application.Queries;
-using Microsoft.Extensions.DependencyInjection;
+﻿namespace FeaturesManagementDashboard.Infrastructure.HandlerDispatchers;
 
-namespace FeaturesManagementDashboard.Infrastructure.HandlerDispatchers
+internal class InMemoryQueryDispatcher : IQueryDispatcher
 {
-    internal class InMemoryQueryDispatcher : IQueryDispatcher
+    private readonly IServiceProvider _serviceProvider;
+
+    public InMemoryQueryDispatcher(IServiceProvider serviceProvider)
+        => _serviceProvider = serviceProvider;
+
+    public async ValueTask<TResult> DispatchAsync<TQuery, TResult>(IQuery<TQuery, TResult> query)
+        where TQuery : class, IQuery<TQuery, TResult>
     {
-        private readonly IServiceProvider _serviceProvider;
-
-        public InMemoryQueryDispatcher(IServiceProvider serviceProvider)
-            => _serviceProvider = serviceProvider;
-
-        public async ValueTask<TResult> DispatchAsync<TQuery, TResult>(IQuery<TQuery, TResult> query)
-            where TQuery : class, IQuery<TQuery, TResult>
-        {
-            using var scope = _serviceProvider.CreateScope();
-            var handler = scope.ServiceProvider.GetRequiredService<IQueryHandler<TQuery, TResult>>();
-            return await handler.HandleAsync((TQuery)query);
-        }
+        using var scope = _serviceProvider.CreateScope();
+        var handler = scope.ServiceProvider.GetRequiredService<IQueryHandler<TQuery, TResult>>();
+        return await handler.HandleAsync((TQuery)query);
     }
 }

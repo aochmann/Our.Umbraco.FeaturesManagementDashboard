@@ -1,11 +1,9 @@
-﻿using Umbraco.Cms.Core.DependencyInjection;
+﻿
+namespace FeaturesManagementDashboard.Extensions;
 
-namespace FeaturesManagementDashboard.Extensions
+public static class FeaturesManagementDashboardExtensions
 {
-    public static class FeaturesManagementDashboardExtensions
-    {
-        public static IUmbracoBuilder AddFeaturesManagementDashboard(this IUmbracoBuilder builder)
-            => new ModuleStartup(builder)
-                .Build();
-    }
+    public static IUmbracoBuilder AddFeaturesManagementDashboard(this IUmbracoBuilder builder)
+        => new ModuleStartup(builder)
+            .Build();
 }

@@ -1,12 +1,8 @@
-﻿using System.Threading.Tasks;
-using SharedAbstractions.Domain;
+﻿namespace SharedAbstractions.Events;
 
-namespace SharedAbstractions.Events
+public interface IEventDispatcher
 {
-    public interface IEventDispatcher
-    {
-        ValueTask DispatchAsync<TEvent>(TEvent @event) where TEvent : IEvent;
+    ValueTask DispatchAsync<TEvent>(TEvent @event) where TEvent : IEvent;
 
-        void Subscribe();
-    }
+    void Subscribe();
 }

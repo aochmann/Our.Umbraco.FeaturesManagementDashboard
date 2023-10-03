@@ -1,10 +1,9 @@
-﻿namespace SharedAbstractions.Queries
-{
-    public interface IQuery
-    {
-    }
+﻿namespace SharedAbstractions.Queries;
 
-    public interface IQuery<in TQuery, out TResult> : IQuery where TQuery : class
-    {
-    }
+public interface IQuery
+{
+}
+
+public interface IQuery<in TQuery, out TResult> : IQuery where TQuery : class
+{
 }

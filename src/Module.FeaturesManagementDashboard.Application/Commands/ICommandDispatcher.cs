@@ -1,9 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿namespace FeaturesManagementDashboard.Application.Commands;
 
-namespace FeaturesManagementDashboard.Application.Commands
+public interface ICommandDispatcher
 {
-    public interface ICommandDispatcher
-    {
-        ValueTask DispatchAsync<TCommand>(TCommand command) where TCommand : class, ICommand;
-    }
+    ValueTask DispatchAsync<TCommand>(TCommand command) where TCommand : class, ICommand;
 }

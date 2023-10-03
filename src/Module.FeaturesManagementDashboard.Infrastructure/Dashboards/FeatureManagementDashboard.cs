@@ -1,22 +1,17 @@
-﻿using System;
-using Umbraco.Cms.Core.Composing;
-using Umbraco.Cms.Core.Dashboards;
+﻿namespace FeaturesManagementDashboard.Infrastructure.Dashboards;
 
-namespace FeaturesManagementDashboard.Infrastructure.Dashboards
+[Weight(80)]
+public class FeatureManagementDashboard : IDashboard
 {
-    [Weight(80)]
-    public class FeatureManagementDashboard : IDashboard
+    public const string DashboardAlias = "Our.Umbraco.FeaturesManagementDashboard";
+    public string Alias => DashboardAlias;
+
+    public string[] Sections => new[]
     {
-        public const string DashboardAlias = "Our.Umbraco.FeaturesManagementDashboard";
-        public string Alias => DashboardAlias;
+        Umbraco.Cms.Core.Constants.Applications.Settings
+    };
 
-        public string[] Sections => new[]
-        {
-            Umbraco.Cms.Core.Constants.Applications.Settings
-        };
+    public IAccessRule[] AccessRules => Array.Empty<IAccessRule>();
 
-        public IAccessRule[] AccessRules => Array.Empty<IAccessRule>();
-
-        public string View => "/App_Plugins/FeatureManagementDashboard/dashboard.html";
-    }
+    public string View => "/App_Plugins/FeatureManagementDashboard/dashboard.html";
 }
