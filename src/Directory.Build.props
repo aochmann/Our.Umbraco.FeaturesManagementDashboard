@@ -14,11 +14,11 @@
   <!-- Project Setup -->
 
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <TargetFrameworks>net7.0;net6.0;net5.0</TargetFrameworks>
+    <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' != 'Release'">
-    <TargetFrameworks>net7.0;net6.0;net5.0</TargetFrameworks>
+    <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -39,11 +39,6 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net7.0'">
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>disable</ImplicitUsings>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net6.0'">
     <Nullable>enable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
@@ -73,13 +68,6 @@
   <PropertyGroup>
     <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)linting\codeanalysis.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-
-  <ItemGroup>
-    <AdditionalFiles Include="$(MSBuildThisFileDirectory)linting\stylecop.json" Visible="false" />
-    <None Include="$(MSBuildThisFileDirectory)linting\codeanalysis.ruleset" Visible="false" />
-    <None Include="$(MSBuildThisFileDirectory)linting\.editorconfig" Visible="false" />
-    <None Include="$(MSBuildThisFileDirectory).editorconfig" Visible="false" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" PrivateAssets="All" />
