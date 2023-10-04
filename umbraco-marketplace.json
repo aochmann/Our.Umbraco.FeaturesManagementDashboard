@@ -1,0 +1,20 @@
+{
+  "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+  "AuthorDetails": {
+    "Name": "Adrian Ochmann, Marcin Zajkowski"
+  },
+  "Category": "Developer Tools",
+  "Description": "Feature Management dashboard for Umbraco 12. This package adds feature management dashboard into **Umbraco** backoffice. It use as feature management the Microsoft Feature Flags engine",
+  "DocumentationUrl": "https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard",
+  "LicenseTypes": [ "Free" ],
+  "IssueTrackerUrl": "https://github.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/issues",
+  "PackageType": "Package",
+  "Screenshots": [
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/aochmann/Our.Umbraco.FeaturesManagementDashboard/develop/Docs/Images/backoffice_section.png",
+      "Caption": "Backoffice dashboard for Feature Management"
+    }
+  ],
+  "Tags": [ "feature management toggle", "features dashboard", "feature flags", "flags" ],
+  "Title": "Our.Umbraco.FeaturesManagementDashboard"
+}
